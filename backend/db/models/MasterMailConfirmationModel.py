@@ -18,7 +18,7 @@ MasterMailConfirmationModel = {
             "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
-                "type": "INTEGER",
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -55,10 +55,11 @@ MasterMailConfirmationModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "model_table",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -84,7 +85,8 @@ MasterMailConfirmationModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -110,7 +112,8 @@ MasterMailConfirmationModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "modified_time": {
@@ -169,7 +172,8 @@ MasterMailConfirmationModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         }
     }

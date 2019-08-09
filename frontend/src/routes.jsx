@@ -20,6 +20,7 @@ import { MasterResourceEdit, MasterResourceList, MasterResourceView } from 'cont
 import { MasterUserGroupEdit, MasterUserGroupList, MasterUserGroupView } from 'containers/MasterUserGroup'
 import { MasterUserGroupResourceEdit, MasterUserGroupResourceList, MasterUserGroupResourceView } from 'containers/MasterUserGroupResource'
 import { MasterUserUserGroupEdit, MasterUserUserGroupList, MasterUserUserGroupView } from 'containers/MasterUserUserGroup'
+import { MasterAuthenticationEdit, MasterAuthenticationList, MasterAuthenticationView } from 'containers/MasterAuthentication'
 
 var routes = [
 	{
@@ -426,6 +427,34 @@ var routes = [
 		name: "Edit User user group",
 		icon: "ni ni-bullet-list-67 text-red",
 		component: MasterUserUserGroupEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/MasterAuthentication/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Authentication",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: MasterAuthenticationList,
+		layout: "/admin"		
+	},
+	{
+		path: "/MasterAuthentication/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Authentication",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: MasterAuthenticationEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/MasterAuthentication/ShowItem/:id",
+		name: "View Authentication",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: MasterAuthenticationView,
+		layout: "/admin"
+	},
+	{
+		path: "/MasterAuthentication/EditItem/:id",
+		name: "Edit Authentication",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: MasterAuthenticationEdit,
 		layout: "/admin"
 	},
 ]

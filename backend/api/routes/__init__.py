@@ -10,5 +10,6 @@ from api.routes.MasterResourceRoute import MasterResourceRoute
 from api.routes.MasterUserGroupRoute import MasterUserGroupRoute
 from api.routes.MasterUserGroupResourceRoute import MasterUserGroupResourceRoute
 from api.routes.MasterUserUserGroupRoute import MasterUserUserGroupRoute
+from api.routes.MasterAuthenticationRoute import MasterAuthenticationRoute
 from api.routes.Helpers import Helpers
 from api.routes.Register import Register

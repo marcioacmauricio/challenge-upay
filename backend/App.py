@@ -40,6 +40,9 @@ if __name__ == "__main__":
         (r'/MasterUserUserGroup', MasterUserUserGroupRoute ),		
 		(r'/MasterUserUserGroup/ShowItem/(\d+$)', MasterUserUserGroupRoute ),
 		(r'/MasterUserUserGroup/ListItems/(.*)/(\d+$)', MasterUserUserGroupRoute ),
+        (r'/MasterAuthentication', MasterAuthenticationRoute ),		
+		(r'/MasterAuthentication/ShowItem/(\d+$)', MasterAuthenticationRoute ),
+		(r'/MasterAuthentication/ListItems/(.*)/(\d+$)', MasterAuthenticationRoute ),
 		(r'/Helpers', Helpers ),
 		(r'/Register', Register )
 	], debug=True)    

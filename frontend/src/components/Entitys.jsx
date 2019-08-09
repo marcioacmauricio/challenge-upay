@@ -58,6 +58,11 @@ const Entitys = {
         "id": 0,
         "Title": "User user group",
         "EntityPredesc": "MasterUser"
+    },
+    "MasterAuthentication": {
+        "id": 0,
+        "Title": "Authentication",
+        "EntityPredesc": "MasterUser"
     }
 }
 export default Entitys

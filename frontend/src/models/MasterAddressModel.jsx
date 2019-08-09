@@ -46,11 +46,12 @@ const MasterAddressModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterAddress",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterAddressModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterAddress",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -101,8 +103,20 @@ const MasterAddressModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterAddress",
                 "TableSchemaPredesc": "MasterUser"
+            }
+        },
+        "modified_time": {
+            "description": "Modified Time",
+            "nickname": "modified_time",
+            "title": "Modified Time",
+            "ordering": 9,
+            "field_type": "UpdatedTime",
+            "parameters": {
+                "validation": "isDateTime",
+                "required": 0
             }
         },
         "postal_code": {
@@ -117,32 +131,6 @@ const MasterAddressModel = {
                 "validation": "isString"
             }
         },
-        "modified_time": {
-            "description": "Modified Time",
-            "nickname": "modified_time",
-            "title": "Modified Time",
-            "ordering": 9,
-            "field_type": "UpdatedTime",
-            "parameters": {
-                "validation": "isDateTime",
-                "required": 0
-            }
-        },
-        "id_user": {
-            "description": "User",
-            "nickname": "id_user",
-            "title": "User",
-            "ordering": 10,
-            "field_type": "KeyDimension",
-            "parameters": {
-                "colLabel": "title",
-                "colValue": "id",
-                "required": "0",
-                "colDescription": "description",
-                "TableSchema": "MasterAddress",
-                "TableSchemaPredesc": "MasterUser"
-            }
-        },
         "address_residence": {
             "description": "Address",
             "nickname": "address_residence",
@@ -153,6 +141,22 @@ const MasterAddressModel = {
                 "default": "",
                 "required": "1",
                 "validation": "isString"
+            }
+        },
+        "id_user": {
+            "description": "User",
+            "nickname": "id_user",
+            "title": "User",
+            "ordering": 10,
+            "field_type": "KeyDimension",
+            "parameters": {
+                "validation": "isInteger",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
+                "TableSchema": "MasterAddress",
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "city": {

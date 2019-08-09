@@ -262,5 +262,27 @@ Entitys = {
         "title": "User user group",
         "EntityPredesc": "MasterUser",
         "schema_nickname": "master"
+    },
+    "MasterAuthentication": {
+        "access_type": 3,
+        "col_description_name": "id",
+        "col_description_type": 1,
+        "col_label_name": "id",
+        "col_label_type": 1,
+        "col_value_name": "id",
+        "col_value_type": 1,
+        "description": "Authentication",
+        "id": 26,
+        "id_schema": 2,
+        "id_secondary_table": "",
+        "id_table": 15,
+        "id_table_type": 1,
+        "is_recursive": 0,
+        "level": 2,
+        "nickname": "authentication",
+        "ordering": 14,
+        "title": "Authentication",
+        "EntityPredesc": "MasterUser",
+        "schema_nickname": "master"
     }
 }

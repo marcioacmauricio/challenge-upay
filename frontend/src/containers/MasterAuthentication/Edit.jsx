@@ -2,19 +2,19 @@ import React from 'react'
 import { ButtonGroup, Col, Form, Card, Button, CardHeader, CardFooter, CardBody, CardTitle, CardText, Alert, FormGroup, Label, Container } from 'reactstrap'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { createMasterMailTemplate, readMasterMailTemplate, updateMasterMailTemplate } from 'reducers/MasterMailTemplate/Actions'
-import MasterMailTemplateModel from 'models/MasterMailTemplateModel'
+import { createMasterAuthentication, readMasterAuthentication, updateMasterAuthentication } from 'reducers/MasterAuthentication/Actions'
+import MasterAuthenticationModel from 'models/MasterAuthenticationModel'
 import Fields from 'fields/Fields'
 import { MenuHeader, HeaderAdmin } from 'components/Headers'
-class MasterMailTemplateEdit extends React.Component {
+class MasterAuthenticationEdit extends React.Component {
 	constructor() {
 		super()
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'title', 'content', 'modified_time']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_user', 'uuid', 'authenticated_at', 'update_at', 'expiration_at', 'status_logged', 'login_data', 'host', 'connection', 'content_length', 'origin', 'user_agent', 'content_type', 'accept', 'referer', 'accept_encoding', 'accept_language', 'remote_ip', 'bearer', 'renewed']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
-		this.ColumnFKPredesc = ''
-		this.TableShemaPredesc = ''
+		this.ColumnFKPredesc = 'id_user'
+		this.TableShemaPredesc = 'MasterUser'
 
 
 		this.onChange = this.onChange.bind(this)
@@ -25,7 +25,7 @@ class MasterMailTemplateEdit extends React.Component {
 		
 		for (let i = 0; i < this.ColumnsList.length; i++){
 			let ColumnName = this.ColumnsList[i]
-			ColumnData = MasterMailTemplateModel.columns[ColumnName]
+			ColumnData = MasterAuthenticationModel.columns[ColumnName]
 			let Field = Fields( ColumnData, this.onChange )
 			Item[ColumnData.nickname] = Field.getDefault()
 			this.ColumnsFields[ColumnName] = Field
@@ -47,9 +47,9 @@ class MasterMailTemplateEdit extends React.Component {
 			Values[ColumnName] = Field.OutPut(this.state.Item[ColumnName])
 		}
 		if (this.props.match.params.id > 0){
-			this.props.updateMasterMailTemplate(Values);
+			this.props.updateMasterAuthentication(Values);
 		} else {
-			this.props.createMasterMailTemplate(Values);
+			this.props.createMasterAuthentication(Values);
 		}
 		e.preventDefault();	   
 	}
@@ -58,7 +58,7 @@ class MasterMailTemplateEdit extends React.Component {
 			let Posts = {
 				Id: this.props.match.params.id
 			}
-			this.props.readMasterMailTemplate( Posts );
+			this.props.readMasterAuthentication( Posts );
 		} else {
 			if (this.ColumnFKPredesc !== ""){
 				let newState = { ...this.state }
@@ -72,7 +72,7 @@ class MasterMailTemplateEdit extends React.Component {
 	componentWillReceiveProps(nextProps) {
 		if (( this.props.match.params.EntityPredesc !== "" ) && ( this.props.match.params.EntityPredesc !== undefined ) && ( this.props.match.params.EntityPredesc !== null ) && (nextProps.Payload.Item !== null)){
 			if (nextProps.Payload.Item.id > 0){
-				this.props.history.push(`/Admin/MasterMailTemplate/EditItem/${nextProps.Payload.Item.id}`)
+				this.props.history.push(`/Admin/MasterAuthentication/EditItem/${nextProps.Payload.Item.id}`)
 				return
 			}			
 		}
@@ -102,7 +102,7 @@ class MasterMailTemplateEdit extends React.Component {
 		)
 	}
 	renderField(ColumnName){
-		let ColumnData = MasterMailTemplateModel.columns[ColumnName]
+		let ColumnData = MasterAuthenticationModel.columns[ColumnName]
 		return (
 			<FormGroup key={ColumnData.nickname} row>
 				<Label for={ColumnData.nickname} sm={2}>{ColumnData.title}</Label>
@@ -115,6 +115,13 @@ class MasterMailTemplateEdit extends React.Component {
 	render() {
 		let ItemLabel = ""
 		let ItemValue = ''
+		if (this.props.match.params.id > 0){
+			if (typeof this.state.Item[this.ColumnFKPredesc] === 'object'){
+				ItemValue = this.state.Item[this.ColumnFKPredesc].value
+			}
+		} else {
+			ItemValue = this.props.match.params.IdPredesc
+		}
 		return (
 			<>   
 				<HeaderAdmin />				
@@ -122,10 +129,10 @@ class MasterMailTemplateEdit extends React.Component {
 					<div className="col">
 						<Card className="shadow">
 							<CardHeader className="border-0">
-								<MenuHeader Entity="MasterMailTemplate" ItemValue={ItemValue} ItemLabel={ItemLabel} View="List" />
+								<MenuHeader Entity="MasterAuthentication" ItemValue={ItemValue} ItemLabel={ItemLabel} View="List" />
 								<ButtonGroup>
 								    <Button  onClick={this.onSubmit.bind(this)} outline color="success"><i className="fa fa-save" aria-hidden="true"></i> Salvar</Button>
-								    <Link className="btn btn-outline-info" to="/Admin/MasterMailTemplate/ListItems"><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
+							        <Link className="btn btn-outline-info" to={`/Admin/MasterAuthentication/ListItems/MasterUser/${ItemValue}`}><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
 								</ButtonGroup>
 							</CardHeader>
 							<CardBody>
@@ -134,15 +141,32 @@ class MasterMailTemplateEdit extends React.Component {
 									{this.renderAlert()}
 									<Form>
 										{this.renderField('created_time')}
-										{this.renderField('title')}
-										{this.renderField('content')}
+										{this.renderField('uuid')}
+										{this.renderField('authenticated_at')}
+										{this.renderField('update_at')}
+										{this.renderField('expiration_at')}
+										{this.renderField('status_logged')}
+										{this.renderField('login_data')}
+										{this.renderField('host')}
+										{this.renderField('connection')}
+										{this.renderField('content_length')}
+										{this.renderField('origin')}
+										{this.renderField('user_agent')}
+										{this.renderField('content_type')}
+										{this.renderField('accept')}
+										{this.renderField('referer')}
+										{this.renderField('accept_encoding')}
+										{this.renderField('accept_language')}
+										{this.renderField('remote_ip')}
+										{this.renderField('bearer')}
+										{this.renderField('renewed')}
 									</Form>
 								</CardText>
 							</CardBody>
 							<CardFooter>
 								<ButtonGroup>
 									<Button onClick={this.onSubmit.bind(this)} outline color="success"><i className="fa fa-save" aria-hidden="true"></i> Salvar</Button>
-						        	<Link className="btn btn-outline-info" to="/Admin/MasterMailTemplate/ListItems"><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
+							    	<Link className="btn btn-outline-info" to={`/Admin/MasterAuthentication/ListItems/MasterUser/${ItemValue}`}><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
 
 								</ButtonGroup>
 							</CardFooter>
@@ -156,8 +180,8 @@ class MasterMailTemplateEdit extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.MasterMailTemplateReducer.item
+		Payload: state.MasterAuthenticationReducer.item
 	}
 	
 }
-export default connect(mapStateToProps, {readMasterMailTemplate, createMasterMailTemplate, updateMasterMailTemplate})(MasterMailTemplateEdit);
+export default connect(mapStateToProps, {readMasterAuthentication, createMasterAuthentication, updateMasterAuthentication})(MasterAuthenticationEdit);

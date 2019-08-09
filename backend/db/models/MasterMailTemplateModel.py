@@ -18,7 +18,7 @@ MasterMailTemplateModel = {
             "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
-                "type": "INTEGER",
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -55,10 +55,11 @@ MasterMailTemplateModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "model_table",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -84,7 +85,8 @@ MasterMailTemplateModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -110,7 +112,8 @@ MasterMailTemplateModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "title": {
@@ -123,17 +126,6 @@ MasterMailTemplateModel = {
                 "required": "1",
                 "type": "CHARACTER VARYING",
                 "validation": "isString"
-            }
-        },
-        "modified_time": {
-            "description": "Modified Time",
-            "title": "Modified Time",
-            "nickname": "modified_time",
-            "field_type": "UpdatedTime",
-            "parameters": {
-                "type": "TIMESTAMP WITHOUT TIME ZONE",
-                "validation": "isDateTime",
-                "required": 0
             }
         },
         "content": {
@@ -150,6 +142,17 @@ MasterMailTemplateModel = {
                 "validation": "isString",
                 "type": "TEXT",
                 "Schema": "transaction"
+            }
+        },
+        "modified_time": {
+            "description": "Modified Time",
+            "title": "Modified Time",
+            "nickname": "modified_time",
+            "field_type": "UpdatedTime",
+            "parameters": {
+                "type": "TIMESTAMP WITHOUT TIME ZONE",
+                "validation": "isDateTime",
+                "required": 0
             }
         }
     }

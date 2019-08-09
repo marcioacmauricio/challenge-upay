@@ -9,7 +9,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class MasterResourceEdit extends React.Component {
 	constructor() {
 		super()
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'title', 'modified_time', 'description']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'title', 'description', 'modified_time']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}

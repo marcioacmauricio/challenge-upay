@@ -12,7 +12,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class MasterColumnPermissionView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id_model_table', 'id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'column_name', 'modified_time', 'id_table_permission', 'permission']
+		this.ColumnsList = ['id', 'id_model_table', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'column_name', 'modified_by', 'modified_time', 'id_table_permission', 'permission']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}

@@ -10,6 +10,7 @@ from db.models.MasterResourceModel import MasterResourceModel
 from db.models.MasterUserGroupModel import MasterUserGroupModel
 from db.models.MasterUserGroupResourceModel import MasterUserGroupResourceModel
 from db.models.MasterUserUserGroupModel import MasterUserUserGroupModel
+from db.models.MasterAuthenticationModel import MasterAuthenticationModel
 
 def getModel(EntityName):
 	if EntityName == 'MasterModelTable':
@@ -47,3 +48,6 @@ def getModel(EntityName):
 
 	if EntityName == 'MasterUserUserGroup':
 		return MasterUserUserGroupModel
+
+	if EntityName == 'MasterAuthentication':
+		return MasterAuthenticationModel

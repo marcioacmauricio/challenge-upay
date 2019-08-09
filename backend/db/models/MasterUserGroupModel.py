@@ -18,7 +18,7 @@ MasterUserGroupModel = {
             "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
-                "type": "INTEGER",
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -55,10 +55,11 @@ MasterUserGroupModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "model_table",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -84,7 +85,8 @@ MasterUserGroupModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -110,7 +112,8 @@ MasterUserGroupModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "title": {
@@ -130,17 +133,6 @@ MasterUserGroupModel = {
                 "required": "1"
             }
         },
-        "modified_time": {
-            "description": "Modified Time",
-            "title": "Modified Time",
-            "nickname": "modified_time",
-            "field_type": "UpdatedTime",
-            "parameters": {
-                "type": "TIMESTAMP WITHOUT TIME ZONE",
-                "validation": "isDateTime",
-                "required": 0
-            }
-        },
         "description": {
             "description": "Description",
             "title": "Description",
@@ -150,6 +142,17 @@ MasterUserGroupModel = {
                 "type": "TEXT",
                 "validation": "isString",
                 "required": "0"
+            }
+        },
+        "modified_time": {
+            "description": "Modified Time",
+            "title": "Modified Time",
+            "nickname": "modified_time",
+            "field_type": "UpdatedTime",
+            "parameters": {
+                "type": "TIMESTAMP WITHOUT TIME ZONE",
+                "validation": "isDateTime",
+                "required": 0
             }
         }
     }

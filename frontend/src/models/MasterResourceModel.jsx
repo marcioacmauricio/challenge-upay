@@ -46,11 +46,12 @@ const MasterResourceModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterResource",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterResourceModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterResource",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -101,6 +103,7 @@ const MasterResourceModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterResource",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -116,17 +119,6 @@ const MasterResourceModel = {
                 "required": "1"
             }
         },
-        "modified_time": {
-            "description": "Modified Time",
-            "nickname": "modified_time",
-            "title": "Modified Time",
-            "ordering": 9,
-            "field_type": "UpdatedTime",
-            "parameters": {
-                "validation": "isDateTime",
-                "required": 0
-            }
-        },
         "description": {
             "description": "Description",
             "nickname": "description",
@@ -136,6 +128,17 @@ const MasterResourceModel = {
             "parameters": {
                 "validation": "isString",
                 "required": "0"
+            }
+        },
+        "modified_time": {
+            "description": "Modified Time",
+            "nickname": "modified_time",
+            "title": "Modified Time",
+            "ordering": 9,
+            "field_type": "UpdatedTime",
+            "parameters": {
+                "validation": "isDateTime",
+                "required": 0
             }
         }
     }

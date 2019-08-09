@@ -46,11 +46,12 @@ const MasterMailConfirmationModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailConfirmation",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterMailConfirmationModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailConfirmation",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -101,6 +103,7 @@ const MasterMailConfirmationModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailConfirmation",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -160,6 +163,7 @@ const MasterMailConfirmationModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailConfirmation",
                 "TableSchemaPredesc": "MasterUser"
             }

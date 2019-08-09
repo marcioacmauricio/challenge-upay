@@ -18,7 +18,7 @@ MasterUserUserGroupModel = {
             "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
-                "type": "INTEGER",
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -55,10 +55,11 @@ MasterUserUserGroupModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "model_table",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -84,7 +85,8 @@ MasterUserUserGroupModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -110,7 +112,8 @@ MasterUserUserGroupModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "modified_time": {
@@ -130,13 +133,14 @@ MasterUserUserGroupModel = {
             "nickname": "id_user",
             "field_type": "KeyDimension",
             "parameters": {
-                "type": "BIGINT",
-                "Table": "user",
+                "type": "INTEGER",
+                "validation": "isInteger",
                 "Schema": "master",
-                "colLabel": "title",
-                "colValue": "id",
-                "required": "0",
-                "colDescription": "description"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "id_user_group": {

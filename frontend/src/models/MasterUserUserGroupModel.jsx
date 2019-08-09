@@ -46,11 +46,12 @@ const MasterUserUserGroupModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUserUserGroup",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterUserUserGroupModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUserUserGroup",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -101,6 +103,7 @@ const MasterUserUserGroupModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUserUserGroup",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -123,10 +126,11 @@ const MasterUserUserGroupModel = {
             "ordering": 10,
             "field_type": "KeyDimension",
             "parameters": {
-                "colLabel": "title",
-                "colValue": "id",
+                "validation": "isInteger",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
                 "required": "0",
-                "colDescription": "description",
                 "TableSchema": "MasterUserUserGroup",
                 "TableSchemaPredesc": "MasterUser"
             }

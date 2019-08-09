@@ -12,7 +12,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class MasterPasswordRecoveryView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id', 'ordering', 'token', 'state', 'created_at', 'checked_out', 'checked_out_time', 'expire_at', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_user']
+		this.ColumnsList = ['id', 'ordering', 'state', 'token', 'checked_out', 'created_at', 'checked_out_time', 'expire_at', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_user']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}

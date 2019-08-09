@@ -4,7 +4,7 @@ from utilities.pretty import pretty
 import json
 from utilities.JwtAuth import *
 @jwtauth
-class MasterMailTemplateRoute(tornado.web.RequestHandler):
+class MasterAuthenticationRoute(tornado.web.RequestHandler):
 	def initialize(self):
 		self.data = {}
 		self.set_header('Content-Type', 'application/json; charset=utf-8')
@@ -22,7 +22,7 @@ class MasterMailTemplateRoute(tornado.web.RequestHandler):
 		self.User = User
 		self.isAuth = True
 		self.DB = DB(self.User)
-		self.Entity = self.DB.getEntity('MasterMailTemplate')
+		self.Entity = self.DB.getEntity('MasterAuthentication')
 		
 	# create item
 	def put(self, table_schema_name = None, item_id = None):
@@ -36,7 +36,7 @@ class MasterMailTemplateRoute(tornado.web.RequestHandler):
 	# get item 
 	def get(self, item_id = None ):
 		Return = {}
-		Columns = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'title', 'content', 'modified_time']
+		Columns = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_user', 'uuid', 'authenticated_at', 'update_at', 'expiration_at', 'status_logged', 'login_data', 'host', 'connection', 'content_length', 'origin', 'user_agent', 'content_type', 'accept', 'referer', 'accept_encoding', 'accept_language', 'remote_ip', 'bearer', 'renewed']
 		self.Entity.setItem(item_id, Columns)
 		Return['Status'] = self.Entity.Status
 		Return['Errors'] = self.Entity.Errors

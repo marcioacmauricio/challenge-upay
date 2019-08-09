@@ -46,11 +46,12 @@ const MasterUserGroupModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUserGroup",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterUserGroupModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUserGroup",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -101,6 +103,7 @@ const MasterUserGroupModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUserGroup",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -122,17 +125,6 @@ const MasterUserGroupModel = {
                 "required": "1"
             }
         },
-        "modified_time": {
-            "description": "Modified Time",
-            "nickname": "modified_time",
-            "title": "Modified Time",
-            "ordering": 9,
-            "field_type": "UpdatedTime",
-            "parameters": {
-                "validation": "isDateTime",
-                "required": 0
-            }
-        },
         "description": {
             "description": "Description",
             "nickname": "description",
@@ -142,6 +134,17 @@ const MasterUserGroupModel = {
             "parameters": {
                 "validation": "isString",
                 "required": "0"
+            }
+        },
+        "modified_time": {
+            "description": "Modified Time",
+            "nickname": "modified_time",
+            "title": "Modified Time",
+            "ordering": 9,
+            "field_type": "UpdatedTime",
+            "parameters": {
+                "validation": "isDateTime",
+                "required": 0
             }
         }
     }

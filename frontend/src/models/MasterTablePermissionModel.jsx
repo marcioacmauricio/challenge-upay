@@ -46,11 +46,12 @@ const MasterTablePermissionModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterTablePermission",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterTablePermissionModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterTablePermission",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -90,17 +92,6 @@ const MasterTablePermissionModel = {
                 "required": 0
             }
         },
-        "table_name": {
-            "description": "Tabela",
-            "nickname": "table_name",
-            "title": "Tabela",
-            "ordering": 8,
-            "field_type": "NickName",
-            "parameters": {
-                "validation": "isNickName",
-                "required": "1"
-            }
-        },
         "modified_by": {
             "description": "Modified By",
             "nickname": "modified_by",
@@ -112,8 +103,20 @@ const MasterTablePermissionModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterTablePermission",
                 "TableSchemaPredesc": "MasterUser"
+            }
+        },
+        "table_name": {
+            "description": "Tabela",
+            "nickname": "table_name",
+            "title": "Tabela",
+            "ordering": 8,
+            "field_type": "NickName",
+            "parameters": {
+                "validation": "isNickName",
+                "required": "1"
             }
         },
         "permission": {

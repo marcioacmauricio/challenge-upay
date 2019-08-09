@@ -46,9 +46,10 @@ const MasterUserModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "first_name",
-                "colValue": "id",
-                "colDescription": "last_name",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUser",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -72,9 +73,10 @@ const MasterUserModel = {
             "field_type": "CreatedBy",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "first_name",
-                "colValue": "id",
-                "colDescription": "last_name",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUser",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -98,9 +100,10 @@ const MasterUserModel = {
             "field_type": "ModifiedBy",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "first_name",
-                "colValue": "id",
-                "colDescription": "last_name",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterUser",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -212,11 +215,12 @@ const MasterUserModel = {
             "field_type": "ForeignKey",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "id",
+                "colLabel": "remote_ip",
                 "colValue": "id",
-                "colDescription": "id",
+                "colDescription": "uuid",
+                "required": "0",
                 "TableSchema": "MasterUser",
-                "TableSchemaPredesc": "MasterUser"
+                "TableSchemaPredesc": "MasterAuthentication"
             }
         }
     }

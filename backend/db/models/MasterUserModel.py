@@ -18,7 +18,7 @@ MasterUserModel = {
             "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
-                "type": "INTEGER",
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -56,9 +56,10 @@ MasterUserModel = {
                 "validation": "isInteger",
                 "Schema": "master",
                 "Table": "user",
-                "colLabel": "first_name",
-                "colValue": "id",
-                "colDescription": "last_name"
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -82,9 +83,10 @@ MasterUserModel = {
                 "validation": "isInteger",
                 "Schema": "master",
                 "Table": "user",
-                "colLabel": "first_name",
-                "colValue": "id",
-                "colDescription": "last_name"
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -108,9 +110,10 @@ MasterUserModel = {
                 "validation": "isInteger",
                 "Schema": "master",
                 "Table": "user",
-                "colLabel": "first_name",
-                "colValue": "id",
-                "colDescription": "last_name"
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "modified_time": {
@@ -221,10 +224,11 @@ MasterUserModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "user",
-                "colLabel": "id",
+                "Table": "authentication",
+                "colLabel": "remote_ip",
                 "colValue": "id",
-                "colDescription": "id"
+                "colDescription": "uuid",
+                "required": "0"
             }
         }
     }

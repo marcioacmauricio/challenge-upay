@@ -85,3 +85,6 @@ class DB(object):
 
 		if EntityName == 'MasterUserUserGroup':
 			return MasterUserUserGroupController( self, self.User )
+
+		if EntityName == 'MasterAuthentication':
+			return MasterAuthenticationController( self, self.User )

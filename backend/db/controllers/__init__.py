@@ -10,3 +10,4 @@ from db.controllers.MasterResourceController import MasterResourceController
 from db.controllers.MasterUserGroupController import MasterUserGroupController
 from db.controllers.MasterUserGroupResourceController import MasterUserGroupResourceController
 from db.controllers.MasterUserUserGroupController import MasterUserUserGroupController
+from db.controllers.MasterAuthenticationController import MasterAuthenticationController

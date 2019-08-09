@@ -46,11 +46,12 @@ const MasterMailTemplateModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailTemplate",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -75,6 +76,7 @@ const MasterMailTemplateModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailTemplate",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -101,6 +103,7 @@ const MasterMailTemplateModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterMailTemplate",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -117,17 +120,6 @@ const MasterMailTemplateModel = {
                 "validation": "isString"
             }
         },
-        "modified_time": {
-            "description": "Modified Time",
-            "nickname": "modified_time",
-            "title": "Modified Time",
-            "ordering": 9,
-            "field_type": "UpdatedTime",
-            "parameters": {
-                "validation": "isDateTime",
-                "required": 0
-            }
-        },
         "content": {
             "description": "Content",
             "nickname": "content",
@@ -142,6 +134,17 @@ const MasterMailTemplateModel = {
                 "colDescription": "description",
                 "validation": "isString",
                 "Schema": "transaction"
+            }
+        },
+        "modified_time": {
+            "description": "Modified Time",
+            "nickname": "modified_time",
+            "title": "Modified Time",
+            "ordering": 9,
+            "field_type": "UpdatedTime",
+            "parameters": {
+                "validation": "isDateTime",
+                "required": 0
             }
         }
     }

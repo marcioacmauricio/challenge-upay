@@ -27,17 +27,6 @@ const MasterPasswordRecoveryModel = {
                 "required": 0
             }
         },
-        "token": {
-            "description": "Token",
-            "nickname": "token",
-            "title": "Token",
-            "ordering": 3,
-            "field_type": "Input",
-            "parameters": {
-                "validation": "isString",
-                "required": "1"
-            }
-        },
         "state": {
             "description": "State",
             "nickname": "state",
@@ -49,14 +38,14 @@ const MasterPasswordRecoveryModel = {
                 "required": 0
             }
         },
-        "created_at": {
-            "description": "Created at",
-            "nickname": "created_at",
-            "title": "Criated at",
-            "ordering": 4,
-            "field_type": "DateTime",
+        "token": {
+            "description": "Token",
+            "nickname": "token",
+            "title": "Token",
+            "ordering": 3,
+            "field_type": "Input",
             "parameters": {
-                "validation": "isDateTime",
+                "validation": "isString",
                 "required": "1"
             }
         },
@@ -68,11 +57,23 @@ const MasterPasswordRecoveryModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterPasswordRecovery",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
+            }
+        },
+        "created_at": {
+            "description": "Created at",
+            "nickname": "created_at",
+            "title": "Criated at",
+            "ordering": 4,
+            "field_type": "DateTime",
+            "parameters": {
+                "validation": "isDateTime",
+                "required": "1"
             }
         },
         "checked_out_time": {
@@ -108,6 +109,7 @@ const MasterPasswordRecoveryModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterPasswordRecovery",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -134,6 +136,7 @@ const MasterPasswordRecoveryModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterPasswordRecovery",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -156,10 +159,11 @@ const MasterPasswordRecoveryModel = {
             "ordering": 10,
             "field_type": "KeyDimension",
             "parameters": {
-                "colLabel": "title",
-                "colValue": "id",
+                "validation": "isInteger",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
                 "required": "0",
-                "colDescription": "description",
                 "TableSchema": "MasterPasswordRecovery",
                 "TableSchemaPredesc": "MasterUser"
             }

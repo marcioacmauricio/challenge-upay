@@ -11,6 +11,7 @@ import MasterResourceReducer from './MasterResource/reducer'
 import MasterUserGroupReducer from './MasterUserGroup/reducer'
 import MasterUserGroupResourceReducer from './MasterUserGroupResource/reducer'
 import MasterUserUserGroupReducer from './MasterUserUserGroup/reducer'
+import MasterAuthenticationReducer from './MasterAuthentication/reducer'
 import HelpersReducer from './HelpersReducer/reducer'
 import Register from './Register/reducer'
 export default combineReducers({
@@ -26,6 +27,7 @@ export default combineReducers({
 	MasterUserGroupReducer,
 	MasterUserGroupResourceReducer,
 	MasterUserUserGroupReducer,
+	MasterAuthenticationReducer,
 	HelpersReducer,
 	Register
 })

@@ -36,7 +36,7 @@ class MasterTablePermissionRoute(tornado.web.RequestHandler):
 	# get item 
 	def get(self, item_id = None ):
 		Return = {}
-		Columns = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'table_name', 'modified_by', 'permission', 'modified_time']
+		Columns = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'table_name', 'permission', 'modified_time']
 		self.Entity.setItem(item_id, Columns)
 		Return['Status'] = self.Entity.Status
 		Return['Errors'] = self.Entity.Errors

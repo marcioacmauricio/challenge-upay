@@ -18,7 +18,7 @@ MasterTablePermissionModel = {
             "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
-                "type": "INTEGER",
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -55,10 +55,11 @@ MasterTablePermissionModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "model_table",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -84,7 +85,8 @@ MasterTablePermissionModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -96,17 +98,6 @@ MasterTablePermissionModel = {
                 "type": "TIMESTAMP WITHOUT TIME ZONE",
                 "validation": "isDateTime",
                 "required": 0
-            }
-        },
-        "table_name": {
-            "description": "Tabela",
-            "title": "Tabela",
-            "nickname": "table_name",
-            "field_type": "NickName",
-            "parameters": {
-                "type": "NAME",
-                "validation": "isNickName",
-                "required": "1"
             }
         },
         "modified_by": {
@@ -121,7 +112,19 @@ MasterTablePermissionModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
+            }
+        },
+        "table_name": {
+            "description": "Tabela",
+            "title": "Tabela",
+            "nickname": "table_name",
+            "field_type": "NickName",
+            "parameters": {
+                "type": "NAME",
+                "validation": "isNickName",
+                "required": "1"
             }
         },
         "permission": {

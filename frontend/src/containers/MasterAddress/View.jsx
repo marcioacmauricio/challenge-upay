@@ -12,7 +12,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class MasterAddressView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'postal_code', 'modified_time', 'id_user', 'address_residence', 'city', 'country', 'estate', 'neighborhood']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'postal_code', 'address_residence', 'id_user', 'city', 'country', 'estate', 'neighborhood']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}

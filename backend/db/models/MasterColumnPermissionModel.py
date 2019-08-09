@@ -12,6 +12,18 @@ MasterColumnPermissionModel = {
     "main_table_schema": "MasterModelTable",
     "sec_table_schema": "",
     "columns": {
+        "id": {
+            "description": "ID",
+            "title": "ID",
+            "nickname": "id",
+            "field_type": "KeyIncremente",
+            "parameters": {
+                "type": "SERIAL",
+                "validation": "isInteger",
+                "required": 1,
+                "primary_key": "1"
+            }
+        },
         "id_model_table": {
             "description": "Model table",
             "title": "Model table",
@@ -25,18 +37,6 @@ MasterColumnPermissionModel = {
                 "colValue": "id",
                 "required": "0",
                 "colDescription": "description"
-            }
-        },
-        "id": {
-            "description": "ID",
-            "title": "ID",
-            "nickname": "id",
-            "field_type": "KeyIncremente",
-            "parameters": {
-                "type": "INTEGER",
-                "validation": "isInteger",
-                "required": 1,
-                "primary_key": "1"
             }
         },
         "ordering": {
@@ -70,10 +70,11 @@ MasterColumnPermissionModel = {
                 "type": "INTEGER",
                 "validation": "isInteger",
                 "Schema": "master",
-                "Table": "model_table",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering"
+                "Table": "user",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "checked_out_time": {
@@ -99,7 +100,8 @@ MasterColumnPermissionModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "created_time": {
@@ -111,6 +113,17 @@ MasterColumnPermissionModel = {
                 "type": "TIMESTAMP WITHOUT TIME ZONE",
                 "validation": "isDateTime",
                 "required": 0
+            }
+        },
+        "column_name": {
+            "description": "Column",
+            "title": "Column",
+            "nickname": "column_name",
+            "field_type": "NickName",
+            "parameters": {
+                "type": "NAME",
+                "validation": "isNickName",
+                "required": "1"
             }
         },
         "modified_by": {
@@ -125,18 +138,8 @@ MasterColumnPermissionModel = {
                 "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
-                "colDescription": "middle_names"
-            }
-        },
-        "column_name": {
-            "description": "Column",
-            "title": "Column",
-            "nickname": "column_name",
-            "field_type": "NickName",
-            "parameters": {
-                "type": "NAME",
-                "validation": "isNickName",
-                "required": "1"
+                "colDescription": "middle_names",
+                "required": "0"
             }
         },
         "modified_time": {

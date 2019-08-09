@@ -4,6 +4,18 @@ const MasterColumnPermissionModel = {
     "key_type": "serial",
     "title": "Column permission",
     "columns": {
+        "id": {
+            "description": "ID",
+            "nickname": "id",
+            "title": "ID",
+            "ordering": 1,
+            "field_type": "KeyIncremente",
+            "parameters": {
+                "validation": "isInteger",
+                "required": 1,
+                "primary_key": "1"
+            }
+        },
         "id_model_table": {
             "description": "Model table",
             "nickname": "id_model_table",
@@ -17,18 +29,6 @@ const MasterColumnPermissionModel = {
                 "colDescription": "description",
                 "TableSchema": "MasterColumnPermission",
                 "TableSchemaPredesc": "MasterModelTable"
-            }
-        },
-        "id": {
-            "description": "ID",
-            "nickname": "id",
-            "title": "ID",
-            "ordering": 1,
-            "field_type": "KeyIncremente",
-            "parameters": {
-                "validation": "isInteger",
-                "required": 1,
-                "primary_key": "1"
             }
         },
         "ordering": {
@@ -61,11 +61,12 @@ const MasterColumnPermissionModel = {
             "field_type": "CheckedOut",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "state",
-                "colValue": "ordering",
-                "colDescription": "ordering",
+                "colLabel": "id",
+                "colValue": "first_name",
+                "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterColumnPermission",
-                "TableSchemaPredesc": "MasterModelTable"
+                "TableSchemaPredesc": "MasterUser"
             }
         },
         "checked_out_time": {
@@ -90,6 +91,7 @@ const MasterColumnPermissionModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterColumnPermission",
                 "TableSchemaPredesc": "MasterUser"
             }
@@ -105,6 +107,17 @@ const MasterColumnPermissionModel = {
                 "required": 0
             }
         },
+        "column_name": {
+            "description": "Column",
+            "nickname": "column_name",
+            "title": "Column",
+            "ordering": 8,
+            "field_type": "NickName",
+            "parameters": {
+                "validation": "isNickName",
+                "required": "1"
+            }
+        },
         "modified_by": {
             "description": "Modified By",
             "nickname": "modified_by",
@@ -116,19 +129,9 @@ const MasterColumnPermissionModel = {
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
+                "required": "0",
                 "TableSchema": "MasterColumnPermission",
                 "TableSchemaPredesc": "MasterUser"
-            }
-        },
-        "column_name": {
-            "description": "Column",
-            "nickname": "column_name",
-            "title": "Column",
-            "ordering": 8,
-            "field_type": "NickName",
-            "parameters": {
-                "validation": "isNickName",
-                "required": "1"
             }
         },
         "modified_time": {

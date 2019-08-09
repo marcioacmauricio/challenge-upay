@@ -2,25 +2,25 @@ import React from 'react';
 import { Card, CardHeader, CardFooter, CardBody, CardTitle, CardText, Alert, Container, Table } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap';
-import { readMasterMailTemplate } from 'reducers/MasterMailTemplate/Actions'
+import { readMasterAuthentication } from 'reducers/MasterAuthentication/Actions'
 import { connect } from 'react-redux'
-import MasterMailTemplateModel from 'models/MasterMailTemplateModel'
+import MasterAuthenticationModel from 'models/MasterAuthenticationModel'
 import Fields from 'fields/Fields'
 import { MenuHeader, HeaderAdmin } from 'components/Headers'
 
 
-class MasterMailTemplateView extends React.Component {
+class MasterAuthenticationView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'title', 'content', 'modified_time']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_user', 'uuid', 'authenticated_at', 'update_at', 'expiration_at', 'status_logged', 'login_data', 'host', 'connection', 'content_length', 'origin', 'user_agent', 'content_type', 'accept', 'referer', 'accept_encoding', 'accept_language', 'remote_ip', 'bearer', 'renewed']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
-		this.ColumnFKPredesc = ''
-		this.TableShemaPredesc = ''		
+		this.ColumnFKPredesc = 'id_user'
+		this.TableShemaPredesc = 'MasterUser'		
 		for (let i = 0; i < this.ColumnsList.length; i++){
 			let ColumnName = this.ColumnsList[i]
-			ColumnData = MasterMailTemplateModel.columns[ColumnName]
+			ColumnData = MasterAuthenticationModel.columns[ColumnName]
 			Item[ColumnData.nickname] = ColumnData.parameters.default
 			this.ColumnsFields[ColumnName] = Fields(ColumnData, this.onChange)
 		}			
@@ -39,7 +39,7 @@ class MasterMailTemplateView extends React.Component {
 			let Posts = {
 				Id: this.props.match.params.id
 			}
-			this.props.readMasterMailTemplate(Posts);
+			this.props.readMasterAuthentication(Posts);
 		}		
 	}
 	componentWillReceiveProps(nextProps) {
@@ -71,7 +71,7 @@ class MasterMailTemplateView extends React.Component {
 			let Value = this.state.Item[ColumnName]
 			let Field = this.ColumnsFields[ColumnName]
 			let ValueShow = Field.OutPutShow(Value)
-			let ColumnData = MasterMailTemplateModel.columns[ColumnName]
+			let ColumnData = MasterAuthenticationModel.columns[ColumnName]
 			Rows.push(<tr key={ColumnName}>
 					<th scope="row">{ColumnData.title}</th>
 					<td>{ValueShow}</td>
@@ -86,7 +86,11 @@ class MasterMailTemplateView extends React.Component {
 			</Table>
 		)	
 	}	
-	render() {	
+	render() {
+		let ItemValue = ''
+		if (typeof this.state.Item[this.ColumnFKPredesc] === 'object'){
+			ItemValue = this.state.Item[this.ColumnFKPredesc].value
+		}	
 	
 		return (
 			<>
@@ -95,14 +99,14 @@ class MasterMailTemplateView extends React.Component {
 					<div className="col">
 						<Card className="shadow">
 							<CardHeader className="border-0">
-								<MenuHeader getItem={this.getItem.bind(this)} Entity="MasterMailTemplate" ItemValue={ this.state.Item.id } ItemLabel={ this.state.Item.title } View="View" />	    				
+								<MenuHeader getItem={this.getItem.bind(this)} Entity="MasterAuthentication" ItemValue={ this.state.Item.id } ItemLabel={ this.state.Item.id } View="View" />	    				
 							</CardHeader>
 							<CardBody>
-								<CardTitle><h2>Mail template</h2></CardTitle>
+								<CardTitle><h2>Authentication</h2></CardTitle>
 								<CardText tag="div" >{this.renderColumns()}</CardText>
 							</CardBody>
 							<CardFooter>
-								<Button outline color="success" className="float-right" ><Link to='/Admin/MasterMailTemplate/ListItems'>Lista</Link></Button>							    
+								<Button outline color="success" className="float-right" ><Link to={`/Admin/MasterAuthentication/ListItems/MasterUser/${ItemValue}`}>Lista</Link></Button>							    
 							</CardFooter>
 						</Card>
 					</div>
@@ -113,8 +117,8 @@ class MasterMailTemplateView extends React.Component {
 }
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.MasterMailTemplateReducer.item
+		Payload: state.MasterAuthenticationReducer.item
 	}
 	
 }
-export default connect(mapStateToProps, {readMasterMailTemplate})(MasterMailTemplateView);
+export default connect(mapStateToProps, {readMasterAuthentication})(MasterAuthenticationView);
