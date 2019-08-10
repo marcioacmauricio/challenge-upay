@@ -140,7 +140,7 @@ class SetPassword extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.Register.item
+		Payload: state.Register.new_password
 	}
 	
 }

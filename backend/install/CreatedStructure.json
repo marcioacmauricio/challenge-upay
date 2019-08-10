@@ -1,0 +1,3126 @@
+{
+    "2": {
+        "ordering": 1,
+        "key": "2",
+        "query": "CREATE SCHEMA IF NOT EXISTS master",
+        "params": {
+            "object": "schema",
+            "name": "master"
+        },
+        "status": {}
+    },
+    "2_14": {
+        "ordering": 1,
+        "key": "2_14",
+        "query": "CREATE TABLE IF NOT EXISTS master.model_table ()",
+        "params": {
+            "object": "table",
+            "name": "model_table"
+        },
+        "status": {}
+    },
+    "2_15": {
+        "ordering": 2,
+        "key": "2_15",
+        "query": "CREATE TABLE IF NOT EXISTS master.user ()",
+        "params": {
+            "object": "table",
+            "name": "user"
+        },
+        "status": {}
+    },
+    "2_20": {
+        "ordering": 3,
+        "key": "2_20",
+        "query": "CREATE TABLE IF NOT EXISTS master.address ()",
+        "params": {
+            "object": "table",
+            "name": "address"
+        },
+        "status": {}
+    },
+    "2_16": {
+        "ordering": 4,
+        "key": "2_16",
+        "query": "CREATE TABLE IF NOT EXISTS master.table_permission ()",
+        "params": {
+            "object": "table",
+            "name": "table_permission"
+        },
+        "status": {}
+    },
+    "2_21": {
+        "ordering": 5,
+        "key": "2_21",
+        "query": "CREATE TABLE IF NOT EXISTS master.column_permission ()",
+        "params": {
+            "object": "table",
+            "name": "column_permission"
+        },
+        "status": {}
+    },
+    "2_23": {
+        "ordering": 6,
+        "key": "2_23",
+        "query": "CREATE TABLE IF NOT EXISTS master.mail_confirmation ()",
+        "params": {
+            "object": "table",
+            "name": "mail_confirmation"
+        },
+        "status": {}
+    },
+    "2_17": {
+        "ordering": 7,
+        "key": "2_17",
+        "query": "CREATE TABLE IF NOT EXISTS master.mail_template ()",
+        "params": {
+            "object": "table",
+            "name": "mail_template"
+        },
+        "status": {}
+    },
+    "2_22": {
+        "ordering": 8,
+        "key": "2_22",
+        "query": "CREATE TABLE IF NOT EXISTS master.password_recovery ()",
+        "params": {
+            "object": "table",
+            "name": "password_recovery"
+        },
+        "status": {}
+    },
+    "2_18": {
+        "ordering": 9,
+        "key": "2_18",
+        "query": "CREATE TABLE IF NOT EXISTS master.resource ()",
+        "params": {
+            "object": "table",
+            "name": "resource"
+        },
+        "status": {}
+    },
+    "2_19": {
+        "ordering": 11,
+        "key": "2_19",
+        "query": "CREATE TABLE IF NOT EXISTS master.user_group ()",
+        "params": {
+            "object": "table",
+            "name": "user_group"
+        },
+        "status": {}
+    },
+    "2_24": {
+        "ordering": 12,
+        "key": "2_24",
+        "query": "CREATE TABLE IF NOT EXISTS master.user_group_resource ()",
+        "params": {
+            "object": "table",
+            "name": "user_group_resource"
+        },
+        "status": {}
+    },
+    "2_25": {
+        "ordering": 13,
+        "key": "2_25",
+        "query": "CREATE TABLE IF NOT EXISTS master.user_user_group ()",
+        "params": {
+            "object": "table",
+            "name": "user_user_group"
+        },
+        "status": {}
+    },
+    "2_26": {
+        "ordering": 14,
+        "key": "2_26",
+        "query": "CREATE TABLE IF NOT EXISTS master.authentication ()",
+        "params": {
+            "object": "table",
+            "name": "authentication"
+        },
+        "status": {}
+    },
+    "2_14_167": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 1,
+        "key": "2_14_167",
+        "query": "ALTER TABLE master.model_table ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_14_168": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 2,
+        "key": "2_14_168",
+        "query": "ALTER TABLE master.model_table ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_14_169": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 3,
+        "key": "2_14_169",
+        "query": "ALTER TABLE master.model_table ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_14_170": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 4,
+        "key": "2_14_170",
+        "query": "ALTER TABLE master.model_table ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_14_171": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 5,
+        "key": "2_14_171",
+        "query": "ALTER TABLE master.model_table ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_14_172": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 6,
+        "key": "2_14_172",
+        "query": "ALTER TABLE master.model_table ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_14_173": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 7,
+        "key": "2_14_173",
+        "query": "ALTER TABLE master.model_table ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_14_174": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 8,
+        "key": "2_14_174",
+        "query": "ALTER TABLE master.model_table ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_14_175": {
+        "schema": "master",
+        "table": "model_table",
+        "ordering": 9,
+        "key": "2_14_175",
+        "query": "ALTER TABLE master.model_table ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_176": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 1,
+        "key": "2_15_176",
+        "query": "ALTER TABLE master.user ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_15_177": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 2,
+        "key": "2_15_177",
+        "query": "ALTER TABLE master.user ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_178": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 3,
+        "key": "2_15_178",
+        "query": "ALTER TABLE master.user ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_179": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 4,
+        "key": "2_15_179",
+        "query": "ALTER TABLE master.user ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_15_180": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 5,
+        "key": "2_15_180",
+        "query": "ALTER TABLE master.user ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_181": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 6,
+        "key": "2_15_181",
+        "query": "ALTER TABLE master.user ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_15_182": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 7,
+        "key": "2_15_182",
+        "query": "ALTER TABLE master.user ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_183": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 8,
+        "key": "2_15_183",
+        "query": "ALTER TABLE master.user ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_15_184": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 9,
+        "key": "2_15_184",
+        "query": "ALTER TABLE master.user ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_185": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 10,
+        "key": "2_15_185",
+        "query": "ALTER TABLE master.user ADD COLUMN first_name CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "first_name",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "2_15_186": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 11,
+        "key": "2_15_186",
+        "query": "ALTER TABLE master.user ADD COLUMN middle_names CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "middle_names",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_187": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 12,
+        "key": "2_15_187",
+        "query": "ALTER TABLE master.user ADD COLUMN last_name CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "last_name",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "2_15_188": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 13,
+        "key": "2_15_188",
+        "query": "ALTER TABLE master.user ADD COLUMN email CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "email",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "2_15_189": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 14,
+        "key": "2_15_189",
+        "query": "ALTER TABLE master.user ADD COLUMN password CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "password",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "2_15_190": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 15,
+        "key": "2_15_190",
+        "query": "ALTER TABLE master.user ADD COLUMN profile_picture TEXT",
+        "params": {
+            "object": "column",
+            "name": "profile_picture",
+            "type": "TEXT",
+            "validation": "isImage",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_191": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 16,
+        "key": "2_15_191",
+        "query": "ALTER TABLE master.user ADD COLUMN about_me TEXT",
+        "params": {
+            "object": "column",
+            "name": "about_me",
+            "type": "TEXT",
+            "validation": "isString",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_192": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 17,
+        "key": "2_15_192",
+        "query": "ALTER TABLE master.user ADD COLUMN nickname NAME",
+        "params": {
+            "object": "column",
+            "name": "nickname",
+            "type": "NAME",
+            "validation": "isNickName",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_15_193": {
+        "schema": "master",
+        "table": "user",
+        "ordering": 18,
+        "key": "2_15_193",
+        "query": "ALTER TABLE master.user ADD COLUMN id_authentication INTEGER",
+        "params": {
+            "object": "column",
+            "name": "id_authentication",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "authentication",
+            "colLabel": "remote_ip",
+            "colValue": "id",
+            "colDescription": "uuid",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_20_238": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 1,
+        "key": "2_20_238",
+        "query": "ALTER TABLE master.address ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_20_239": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 2,
+        "key": "2_20_239",
+        "query": "ALTER TABLE master.address ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_20_240": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 3,
+        "key": "2_20_240",
+        "query": "ALTER TABLE master.address ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_20_241": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 4,
+        "key": "2_20_241",
+        "query": "ALTER TABLE master.address ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_20_242": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 5,
+        "key": "2_20_242",
+        "query": "ALTER TABLE master.address ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_20_243": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 6,
+        "key": "2_20_243",
+        "query": "ALTER TABLE master.address ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_20_244": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 7,
+        "key": "2_20_244",
+        "query": "ALTER TABLE master.address ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_20_245": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 8,
+        "key": "2_20_245",
+        "query": "ALTER TABLE master.address ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_20_247": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 9,
+        "key": "2_20_247",
+        "query": "ALTER TABLE master.address ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_20_246": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 9,
+        "key": "2_20_246",
+        "query": "ALTER TABLE master.address ADD COLUMN postal_code CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "postal_code",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_20_249": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 10,
+        "key": "2_20_249",
+        "query": "ALTER TABLE master.address ADD COLUMN address_residence CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "address_residence",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_20_248": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 10,
+        "key": "2_20_248",
+        "query": "ALTER TABLE master.address ADD COLUMN id_user INTEGER",
+        "params": {
+            "object": "column",
+            "name": "id_user",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_20_250": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 11,
+        "key": "2_20_250",
+        "query": "ALTER TABLE master.address ADD COLUMN city CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "city",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_20_251": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 12,
+        "key": "2_20_251",
+        "query": "ALTER TABLE master.address ADD COLUMN country CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "country",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_20_252": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 13,
+        "key": "2_20_252",
+        "query": "ALTER TABLE master.address ADD COLUMN estate CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "estate",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_20_253": {
+        "schema": "master",
+        "table": "address",
+        "ordering": 14,
+        "key": "2_20_253",
+        "query": "ALTER TABLE master.address ADD COLUMN neighborhood CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "neighborhood",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_16_194": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 1,
+        "key": "2_16_194",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_16_195": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 2,
+        "key": "2_16_195",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_16_196": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 3,
+        "key": "2_16_196",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_16_197": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 4,
+        "key": "2_16_197",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_16_198": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 5,
+        "key": "2_16_198",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_16_199": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 6,
+        "key": "2_16_199",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_16_200": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 7,
+        "key": "2_16_200",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_16_202": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 8,
+        "key": "2_16_202",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_16_201": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 8,
+        "key": "2_16_201",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN table_name NAME NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "table_name",
+            "type": "NAME",
+            "validation": "isNickName",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_16_203": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 9,
+        "key": "2_16_203",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN permission INTEGER NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "permission",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "options": [
+                {
+                    "label": "Criar",
+                    "value": "1"
+                },
+                {
+                    "label": "Ver",
+                    "value": "2"
+                },
+                {
+                    "label": "Editar",
+                    "value": "3"
+                },
+                {
+                    "label": "Remover",
+                    "value": "4"
+                }
+            ],
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_16_204": {
+        "schema": "master",
+        "table": "table_permission",
+        "ordering": 9,
+        "key": "2_16_204",
+        "query": "ALTER TABLE master.table_permission ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_21_255": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 1,
+        "key": "2_21_255",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_21_254": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 1,
+        "key": "2_21_254",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN id_model_table BIGINT",
+        "params": {
+            "object": "column",
+            "name": "id_model_table",
+            "type": "BIGINT",
+            "Table": "model_table",
+            "Schema": "master",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "0",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "2_21_256": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 2,
+        "key": "2_21_256",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_21_257": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 3,
+        "key": "2_21_257",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_21_258": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 4,
+        "key": "2_21_258",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_21_259": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 5,
+        "key": "2_21_259",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_21_260": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 6,
+        "key": "2_21_260",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_21_261": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 7,
+        "key": "2_21_261",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_21_263": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 8,
+        "key": "2_21_263",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN column_name NAME NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "column_name",
+            "type": "NAME",
+            "validation": "isNickName",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_21_262": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 8,
+        "key": "2_21_262",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_21_264": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 9,
+        "key": "2_21_264",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_21_265": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 9,
+        "key": "2_21_265",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN id_table_permission BIGINT",
+        "params": {
+            "object": "column",
+            "name": "id_table_permission",
+            "type": "BIGINT",
+            "Table": "table_permission",
+            "Schema": "master",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "0",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "2_21_266": {
+        "schema": "master",
+        "table": "column_permission",
+        "ordering": 10,
+        "key": "2_21_266",
+        "query": "ALTER TABLE master.column_permission ADD COLUMN permission INTEGER NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "permission",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "options": [
+                {
+                    "label": "Criar",
+                    "value": "1"
+                },
+                {
+                    "label": "Ver",
+                    "value": "2"
+                },
+                {
+                    "label": "Atualizar",
+                    "value": "3"
+                },
+                {
+                    "label": "Remover",
+                    "value": "4"
+                }
+            ],
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_23_280": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 1,
+        "key": "2_23_280",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_23_281": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 2,
+        "key": "2_23_281",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_282": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 3,
+        "key": "2_23_282",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_283": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 4,
+        "key": "2_23_283",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_23_284": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 5,
+        "key": "2_23_284",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_285": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 6,
+        "key": "2_23_285",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_23_286": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 7,
+        "key": "2_23_286",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_287": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 8,
+        "key": "2_23_287",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_23_288": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 9,
+        "key": "2_23_288",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_289": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 10,
+        "key": "2_23_289",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN token CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "token",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_290": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 11,
+        "key": "2_23_290",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN created_at TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_291": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 12,
+        "key": "2_23_291",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN expire_at TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "expire_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_23_292": {
+        "schema": "master",
+        "table": "mail_confirmation",
+        "ordering": 13,
+        "key": "2_23_292",
+        "query": "ALTER TABLE master.mail_confirmation ADD COLUMN id_user INTEGER",
+        "params": {
+            "object": "column",
+            "name": "id_user",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_17_205": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 1,
+        "key": "2_17_205",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_17_206": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 2,
+        "key": "2_17_206",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_17_207": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 3,
+        "key": "2_17_207",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_17_208": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 4,
+        "key": "2_17_208",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_17_209": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 5,
+        "key": "2_17_209",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_17_210": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 6,
+        "key": "2_17_210",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_17_211": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 7,
+        "key": "2_17_211",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_17_212": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 8,
+        "key": "2_17_212",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_17_213": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 8,
+        "key": "2_17_213",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN title CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "title",
+            "default": "",
+            "required": "1",
+            "type": "CHARACTER VARYING",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_17_215": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 9,
+        "key": "2_17_215",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN content TEXT",
+        "params": {
+            "object": "column",
+            "name": "content",
+            "colLabel": "title",
+            "required": "0",
+            "colValue": "id",
+            "Table": "transaction",
+            "colDescription": "description",
+            "validation": "isString",
+            "type": "TEXT",
+            "Schema": "transaction"
+        },
+        "status": {}
+    },
+    "2_17_214": {
+        "schema": "master",
+        "table": "mail_template",
+        "ordering": 9,
+        "key": "2_17_214",
+        "query": "ALTER TABLE master.mail_template ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_22_267": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 1,
+        "key": "2_22_267",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_22_268": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 2,
+        "key": "2_22_268",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_22_270": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 3,
+        "key": "2_22_270",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_22_269": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 3,
+        "key": "2_22_269",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN token CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "token",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_22_272": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 4,
+        "key": "2_22_272",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_22_271": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 4,
+        "key": "2_22_271",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN created_at TIMESTAMP WITHOUT TIME ZONE NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "created_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_22_273": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 5,
+        "key": "2_22_273",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_22_274": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 5,
+        "key": "2_22_274",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN expire_at TIMESTAMP WITHOUT TIME ZONE NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "expire_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_22_275": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 6,
+        "key": "2_22_275",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_22_276": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 7,
+        "key": "2_22_276",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_22_277": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 8,
+        "key": "2_22_277",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_22_278": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 9,
+        "key": "2_22_278",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_22_279": {
+        "schema": "master",
+        "table": "password_recovery",
+        "ordering": 10,
+        "key": "2_22_279",
+        "query": "ALTER TABLE master.password_recovery ADD COLUMN id_user INTEGER",
+        "params": {
+            "object": "column",
+            "name": "id_user",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_18_216": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 1,
+        "key": "2_18_216",
+        "query": "ALTER TABLE master.resource ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_18_217": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 2,
+        "key": "2_18_217",
+        "query": "ALTER TABLE master.resource ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_18_218": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 3,
+        "key": "2_18_218",
+        "query": "ALTER TABLE master.resource ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_18_219": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 4,
+        "key": "2_18_219",
+        "query": "ALTER TABLE master.resource ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_18_220": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 5,
+        "key": "2_18_220",
+        "query": "ALTER TABLE master.resource ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_18_221": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 6,
+        "key": "2_18_221",
+        "query": "ALTER TABLE master.resource ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_18_222": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 7,
+        "key": "2_18_222",
+        "query": "ALTER TABLE master.resource ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_18_223": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 8,
+        "key": "2_18_223",
+        "query": "ALTER TABLE master.resource ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_18_224": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 8,
+        "key": "2_18_224",
+        "query": "ALTER TABLE master.resource ADD COLUMN title CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "title",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_18_226": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 9,
+        "key": "2_18_226",
+        "query": "ALTER TABLE master.resource ADD COLUMN description TEXT",
+        "params": {
+            "object": "column",
+            "name": "description",
+            "type": "TEXT",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_18_225": {
+        "schema": "master",
+        "table": "resource",
+        "ordering": 9,
+        "key": "2_18_225",
+        "query": "ALTER TABLE master.resource ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_19_227": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 1,
+        "key": "2_19_227",
+        "query": "ALTER TABLE master.user_group ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_19_228": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 2,
+        "key": "2_19_228",
+        "query": "ALTER TABLE master.user_group ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_19_229": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 3,
+        "key": "2_19_229",
+        "query": "ALTER TABLE master.user_group ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_19_230": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 4,
+        "key": "2_19_230",
+        "query": "ALTER TABLE master.user_group ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_19_231": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 5,
+        "key": "2_19_231",
+        "query": "ALTER TABLE master.user_group ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_19_232": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 6,
+        "key": "2_19_232",
+        "query": "ALTER TABLE master.user_group ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_19_233": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 7,
+        "key": "2_19_233",
+        "query": "ALTER TABLE master.user_group ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_19_234": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 8,
+        "key": "2_19_234",
+        "query": "ALTER TABLE master.user_group ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_19_235": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 8,
+        "key": "2_19_235",
+        "query": "ALTER TABLE master.user_group ADD COLUMN title CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "title",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "first_name",
+            "colValue": "id",
+            "colDescription": "last_name",
+            "default": "",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_19_237": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 9,
+        "key": "2_19_237",
+        "query": "ALTER TABLE master.user_group ADD COLUMN description TEXT",
+        "params": {
+            "object": "column",
+            "name": "description",
+            "type": "TEXT",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_19_236": {
+        "schema": "master",
+        "table": "user_group",
+        "ordering": 9,
+        "key": "2_19_236",
+        "query": "ALTER TABLE master.user_group ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_24_293": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 1,
+        "key": "2_24_293",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_24_294": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 2,
+        "key": "2_24_294",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_24_295": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 3,
+        "key": "2_24_295",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_24_296": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 4,
+        "key": "2_24_296",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_24_297": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 5,
+        "key": "2_24_297",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_24_298": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 6,
+        "key": "2_24_298",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_24_299": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 7,
+        "key": "2_24_299",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_24_300": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 8,
+        "key": "2_24_300",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_24_301": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 9,
+        "key": "2_24_301",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_24_302": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 10,
+        "key": "2_24_302",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN id_user_group BIGINT",
+        "params": {
+            "object": "column",
+            "name": "id_user_group",
+            "type": "BIGINT",
+            "Table": "user_group",
+            "Schema": "master",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "0",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "2_24_303": {
+        "schema": "master",
+        "table": "user_group_resource",
+        "ordering": 11,
+        "key": "2_24_303",
+        "query": "ALTER TABLE master.user_group_resource ADD COLUMN id_resource INTEGER NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "id_resource",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "resource",
+            "colLabel": "title",
+            "colValue": "id",
+            "colDescription": "description",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_25_304": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 1,
+        "key": "2_25_304",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_25_305": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 2,
+        "key": "2_25_305",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_25_306": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 3,
+        "key": "2_25_306",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_25_307": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 4,
+        "key": "2_25_307",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_25_308": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 5,
+        "key": "2_25_308",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_25_309": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 6,
+        "key": "2_25_309",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_25_310": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 7,
+        "key": "2_25_310",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_25_311": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 8,
+        "key": "2_25_311",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_25_312": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 9,
+        "key": "2_25_312",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_25_313": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 10,
+        "key": "2_25_313",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN id_user INTEGER",
+        "params": {
+            "object": "column",
+            "name": "id_user",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_25_314": {
+        "schema": "master",
+        "table": "user_user_group",
+        "ordering": 11,
+        "key": "2_25_314",
+        "query": "ALTER TABLE master.user_user_group ADD COLUMN id_user_group INTEGER NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "id_user_group",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user_group",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "1",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "2_26_344": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 1,
+        "key": "2_26_344",
+        "query": "ALTER TABLE master.authentication ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "2_26_345": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 2,
+        "key": "2_26_345",
+        "query": "ALTER TABLE master.authentication ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_26_346": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 3,
+        "key": "2_26_346",
+        "query": "ALTER TABLE master.authentication ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_26_347": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 4,
+        "key": "2_26_347",
+        "query": "ALTER TABLE master.authentication ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_348": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 5,
+        "key": "2_26_348",
+        "query": "ALTER TABLE master.authentication ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_26_349": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 6,
+        "key": "2_26_349",
+        "query": "ALTER TABLE master.authentication ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_350": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 7,
+        "key": "2_26_350",
+        "query": "ALTER TABLE master.authentication ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_26_351": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 8,
+        "key": "2_26_351",
+        "query": "ALTER TABLE master.authentication ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_352": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 9,
+        "key": "2_26_352",
+        "query": "ALTER TABLE master.authentication ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "2_26_353": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 10,
+        "key": "2_26_353",
+        "query": "ALTER TABLE master.authentication ADD COLUMN id_user INTEGER",
+        "params": {
+            "object": "column",
+            "name": "id_user",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_354": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 11,
+        "key": "2_26_354",
+        "query": "ALTER TABLE master.authentication ADD COLUMN uuid NAME NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "uuid",
+            "type": "NAME",
+            "validation": "isString",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_26_355": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 12,
+        "key": "2_26_355",
+        "query": "ALTER TABLE master.authentication ADD COLUMN authenticated_at TIMESTAMP WITHOUT TIME ZONE NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "authenticated_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_26_356": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 13,
+        "key": "2_26_356",
+        "query": "ALTER TABLE master.authentication ADD COLUMN update_at TIMESTAMP WITHOUT TIME ZONE NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "update_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_26_357": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 14,
+        "key": "2_26_357",
+        "query": "ALTER TABLE master.authentication ADD COLUMN expiration_at TIMESTAMP WITHOUT TIME ZONE NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "expiration_at",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_26_358": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 15,
+        "key": "2_26_358",
+        "query": "ALTER TABLE master.authentication ADD COLUMN status_logged INTEGER NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "status_logged",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "options": [
+                {
+                    "label": "Logado",
+                    "value": "1"
+                },
+                {
+                    "label": "Inativo",
+                    "value": "2"
+                },
+                {
+                    "label": "Finalizado",
+                    "value": "3"
+                }
+            ],
+            "required": "1"
+        },
+        "status": {}
+    },
+    "2_26_359": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 16,
+        "key": "2_26_359",
+        "query": "ALTER TABLE master.authentication ADD COLUMN login_data TEXT",
+        "params": {
+            "object": "column",
+            "name": "login_data",
+            "default": "",
+            "required": "0",
+            "type": "TEXT",
+            "validation": "isString"
+        },
+        "status": {}
+    },
+    "2_26_360": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 17,
+        "key": "2_26_360",
+        "query": "ALTER TABLE master.authentication ADD COLUMN host CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "host",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_361": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 18,
+        "key": "2_26_361",
+        "query": "ALTER TABLE master.authentication ADD COLUMN connection CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "connection",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_362": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 19,
+        "key": "2_26_362",
+        "query": "ALTER TABLE master.authentication ADD COLUMN content_length CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "content_length",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_363": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 20,
+        "key": "2_26_363",
+        "query": "ALTER TABLE master.authentication ADD COLUMN origin CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "origin",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_364": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 21,
+        "key": "2_26_364",
+        "query": "ALTER TABLE master.authentication ADD COLUMN user_agent CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "user_agent",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_365": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 22,
+        "key": "2_26_365",
+        "query": "ALTER TABLE master.authentication ADD COLUMN content_type CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "content_type",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_366": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 23,
+        "key": "2_26_366",
+        "query": "ALTER TABLE master.authentication ADD COLUMN accept CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "accept",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_367": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 24,
+        "key": "2_26_367",
+        "query": "ALTER TABLE master.authentication ADD COLUMN referer CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "referer",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_368": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 25,
+        "key": "2_26_368",
+        "query": "ALTER TABLE master.authentication ADD COLUMN accept_encoding CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "accept_encoding",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_369": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 26,
+        "key": "2_26_369",
+        "query": "ALTER TABLE master.authentication ADD COLUMN accept_language CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "accept_language",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_370": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 27,
+        "key": "2_26_370",
+        "query": "ALTER TABLE master.authentication ADD COLUMN remote_ip CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "remote_ip",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_371": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 28,
+        "key": "2_26_371",
+        "query": "ALTER TABLE master.authentication ADD COLUMN bearer CHARACTER VARYING",
+        "params": {
+            "object": "column",
+            "name": "bearer",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "2_26_372": {
+        "schema": "master",
+        "table": "authentication",
+        "ordering": 29,
+        "key": "2_26_372",
+        "query": "ALTER TABLE master.authentication ADD COLUMN renewed BOOLEAN",
+        "params": {
+            "object": "column",
+            "name": "renewed",
+            "type": "BOOLEAN",
+            "validation": "isBoolean",
+            "required": "0"
+        },
+        "status": {}
+    }
+}

@@ -92,6 +92,7 @@ class RegisterHelper(object):
 		User = self.DB.getEntity('MasterUser')
 		User.load(Keys = ['email'], Values = [Data.get('login')])
 		if bool(User.get('id')):
+			print(User)
 			if bcrypt.checkpw(Data.get('password').encode('utf-8'), User.get('password').encode('utf-8')):
 				return self.CreateAuthentication(User, Header)					
 		return Return
@@ -391,11 +392,9 @@ class RegisterHelper(object):
 			Return['Message'] = "Este token se encontra expirado! Soliticite nova recuperação de senha."
 			return Return
 		User = self.DB.getEntity('MasterUser')
-
-		hsh = md5()
-		hsh.update(Data.get('password').encode('utf-8'))
 		User.load(PasswordRecovery.get('id_user'))
-		User['password'] = hsh.hexdigest()
+		hashed = bcrypt.hashpw(Data.get('password').encode('utf-8'), bcrypt.gensalt())
+		User['password'] = hashed.decode('utf-8')
 		User.save('id')
 		if not User.Status:
 			Return['Recovered'] = False

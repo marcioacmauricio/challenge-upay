@@ -99,7 +99,7 @@ class RecoverPassword extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.Register.item
+		Payload: state.Register.recover_password
 	}
 	
 }

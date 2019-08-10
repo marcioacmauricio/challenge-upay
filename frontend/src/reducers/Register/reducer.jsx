@@ -48,11 +48,11 @@ export default function (state = initialState, action) {
 			return newState
 
 		case RECOVER_PASSWORD: 
-			newState.login = {...action.payload, params: action.params}
+			newState.recover_password = {...action.payload, params: action.params}
 			return newState
 
 		case SET_NEW_PASSWORD: 
-			newState.login = {...action.payload, params: action.params}
+			newState.new_password = {...action.payload, params: action.params}
 			return newState
 
 		case CHECK_TOKEN_RECOVER: 
