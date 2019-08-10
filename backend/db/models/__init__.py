@@ -11,6 +11,11 @@ from db.models.MasterUserGroupModel import MasterUserGroupModel
 from db.models.MasterUserGroupResourceModel import MasterUserGroupResourceModel
 from db.models.MasterUserUserGroupModel import MasterUserUserGroupModel
 from db.models.MasterAuthenticationModel import MasterAuthenticationModel
+from db.models.TicketsPromoterModel import TicketsPromoterModel
+from db.models.TicketsEventModel import TicketsEventModel
+from db.models.TicketsTicketModel import TicketsTicketModel
+from db.models.TicketsCouponModel import TicketsCouponModel
+from db.models.TicketsSaleModel import TicketsSaleModel
 
 def getModel(EntityName):
 	if EntityName == 'MasterModelTable':
@@ -51,3 +56,18 @@ def getModel(EntityName):
 
 	if EntityName == 'MasterAuthentication':
 		return MasterAuthenticationModel
+
+	if EntityName == 'TicketsPromoter':
+		return TicketsPromoterModel
+
+	if EntityName == 'TicketsEvent':
+		return TicketsEventModel
+
+	if EntityName == 'TicketsTicket':
+		return TicketsTicketModel
+
+	if EntityName == 'TicketsCoupon':
+		return TicketsCouponModel
+
+	if EntityName == 'TicketsSale':
+		return TicketsSaleModel

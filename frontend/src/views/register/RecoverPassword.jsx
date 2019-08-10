@@ -27,7 +27,7 @@ class RecoverPassword extends React.Component {
 		}
 	}
 	onClick(event){
-		debugger
+		// debugger
 		let Post = {
 			Method: "recoverPassword",
 			Item: this.state.Item

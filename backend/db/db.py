@@ -88,3 +88,18 @@ class DB(object):
 
 		if EntityName == 'MasterAuthentication':
 			return MasterAuthenticationController( self, self.User )
+
+		if EntityName == 'TicketsPromoter':
+			return TicketsPromoterController( self, self.User )
+
+		if EntityName == 'TicketsEvent':
+			return TicketsEventController( self, self.User )
+
+		if EntityName == 'TicketsTicket':
+			return TicketsTicketController( self, self.User )
+
+		if EntityName == 'TicketsCoupon':
+			return TicketsCouponController( self, self.User )
+
+		if EntityName == 'TicketsSale':
+			return TicketsSaleController( self, self.User )

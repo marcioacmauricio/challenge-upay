@@ -12,6 +12,11 @@ import MasterUserGroupReducer from './MasterUserGroup/reducer'
 import MasterUserGroupResourceReducer from './MasterUserGroupResource/reducer'
 import MasterUserUserGroupReducer from './MasterUserUserGroup/reducer'
 import MasterAuthenticationReducer from './MasterAuthentication/reducer'
+import TicketsPromoterReducer from './TicketsPromoter/reducer'
+import TicketsEventReducer from './TicketsEvent/reducer'
+import TicketsTicketReducer from './TicketsTicket/reducer'
+import TicketsCouponReducer from './TicketsCoupon/reducer'
+import TicketsSaleReducer from './TicketsSale/reducer'
 import HelpersReducer from './HelpersReducer/reducer'
 import Register from './Register/reducer'
 export default combineReducers({
@@ -28,6 +33,11 @@ export default combineReducers({
 	MasterUserGroupResourceReducer,
 	MasterUserUserGroupReducer,
 	MasterAuthenticationReducer,
+	TicketsPromoterReducer,
+	TicketsEventReducer,
+	TicketsTicketReducer,
+	TicketsCouponReducer,
+	TicketsSaleReducer,
 	HelpersReducer,
 	Register
 })

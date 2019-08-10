@@ -63,6 +63,31 @@ const Entitys = {
         "id": 0,
         "Title": "Authentication",
         "EntityPredesc": "MasterUser"
+    },
+    "TicketsPromoter": {
+        "id": 0,
+        "Title": "Promotoras",
+        "EntityPredesc": ""
+    },
+    "TicketsEvent": {
+        "id": 0,
+        "Title": "Eventos",
+        "EntityPredesc": "TicketsPromoter"
+    },
+    "TicketsTicket": {
+        "id": 0,
+        "Title": "Tickets",
+        "EntityPredesc": "TicketsPromoter"
+    },
+    "TicketsCoupon": {
+        "id": 0,
+        "Title": "Cupons",
+        "EntityPredesc": "TicketsPromoter"
+    },
+    "TicketsSale": {
+        "id": 0,
+        "Title": "Meus Tickets",
+        "EntityPredesc": "MasterUser"
     }
 }
 export default Entitys

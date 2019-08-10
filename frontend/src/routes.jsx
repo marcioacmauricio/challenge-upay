@@ -21,6 +21,11 @@ import { MasterUserGroupEdit, MasterUserGroupList, MasterUserGroupView } from 'c
 import { MasterUserGroupResourceEdit, MasterUserGroupResourceList, MasterUserGroupResourceView } from 'containers/MasterUserGroupResource'
 import { MasterUserUserGroupEdit, MasterUserUserGroupList, MasterUserUserGroupView } from 'containers/MasterUserUserGroup'
 import { MasterAuthenticationEdit, MasterAuthenticationList, MasterAuthenticationView } from 'containers/MasterAuthentication'
+import { TicketsPromoterEdit, TicketsPromoterList, TicketsPromoterView } from 'containers/TicketsPromoter'
+import { TicketsEventEdit, TicketsEventList, TicketsEventView } from 'containers/TicketsEvent'
+import { TicketsTicketEdit, TicketsTicketList, TicketsTicketView } from 'containers/TicketsTicket'
+import { TicketsCouponEdit, TicketsCouponList, TicketsCouponView } from 'containers/TicketsCoupon'
+import { TicketsSaleEdit, TicketsSaleList, TicketsSaleView } from 'containers/TicketsSale'
 
 var routes = [
 	{
@@ -455,6 +460,146 @@ var routes = [
 		name: "Edit Authentication",
 		icon: "ni ni-bullet-list-67 text-red",
 		component: MasterAuthenticationEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsPromoter/ListItems",
+		name: "List Promotoras",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsPromoterList,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsPromoter/NewItem",
+		name: "Add Promotoras",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsPromoterEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsPromoter/ShowItem/:id",
+		name: "View Promotoras",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsPromoterView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsPromoter/EditItem/:id",
+		name: "Edit Promotoras",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsPromoterEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsEvent/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Eventos",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsEventList,
+		layout: "/admin"		
+	},
+	{
+		path: "/TicketsEvent/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Eventos",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsEventEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsEvent/ShowItem/:id",
+		name: "View Eventos",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsEventView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsEvent/EditItem/:id",
+		name: "Edit Eventos",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsEventEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsTicket/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsTicketList,
+		layout: "/admin"		
+	},
+	{
+		path: "/TicketsTicket/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsTicketEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsTicket/ShowItem/:id",
+		name: "View Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsTicketView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsTicket/EditItem/:id",
+		name: "Edit Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsTicketEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCoupon/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Cupons",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCouponList,
+		layout: "/admin"		
+	},
+	{
+		path: "/TicketsCoupon/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Cupons",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCouponEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCoupon/ShowItem/:id",
+		name: "View Cupons",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCouponView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCoupon/EditItem/:id",
+		name: "Edit Cupons",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCouponEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsSale/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Meus Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsSaleList,
+		layout: "/admin"		
+	},
+	{
+		path: "/TicketsSale/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Meus Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsSaleEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsSale/ShowItem/:id",
+		name: "View Meus Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsSaleView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsSale/EditItem/:id",
+		name: "Edit Meus Tickets",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsSaleEdit,
 		layout: "/admin"
 	},
 ]

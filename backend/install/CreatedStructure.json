@@ -7,7 +7,9 @@
             "object": "schema",
             "name": "master"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14": {
         "ordering": 1,
@@ -17,7 +19,9 @@
             "object": "table",
             "name": "model_table"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15": {
         "ordering": 2,
@@ -27,7 +31,9 @@
             "object": "table",
             "name": "user"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20": {
         "ordering": 3,
@@ -37,7 +43,9 @@
             "object": "table",
             "name": "address"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16": {
         "ordering": 4,
@@ -47,7 +55,9 @@
             "object": "table",
             "name": "table_permission"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21": {
         "ordering": 5,
@@ -57,7 +67,9 @@
             "object": "table",
             "name": "column_permission"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23": {
         "ordering": 6,
@@ -67,7 +79,9 @@
             "object": "table",
             "name": "mail_confirmation"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17": {
         "ordering": 7,
@@ -77,7 +91,9 @@
             "object": "table",
             "name": "mail_template"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22": {
         "ordering": 8,
@@ -87,7 +103,9 @@
             "object": "table",
             "name": "password_recovery"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18": {
         "ordering": 9,
@@ -97,7 +115,9 @@
             "object": "table",
             "name": "resource"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19": {
         "ordering": 11,
@@ -107,7 +127,9 @@
             "object": "table",
             "name": "user_group"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24": {
         "ordering": 12,
@@ -117,7 +139,9 @@
             "object": "table",
             "name": "user_group_resource"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25": {
         "ordering": 13,
@@ -127,7 +151,9 @@
             "object": "table",
             "name": "user_user_group"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26": {
         "ordering": 14,
@@ -137,7 +163,9 @@
             "object": "table",
             "name": "authentication"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_167": {
         "schema": "master",
@@ -153,7 +181,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_168": {
         "schema": "master",
@@ -168,7 +198,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_169": {
         "schema": "master",
@@ -183,7 +215,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_170": {
         "schema": "master",
@@ -203,7 +237,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_171": {
         "schema": "master",
@@ -218,7 +254,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_172": {
         "schema": "master",
@@ -238,7 +276,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_173": {
         "schema": "master",
@@ -253,7 +293,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_174": {
         "schema": "master",
@@ -273,7 +315,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_14_175": {
         "schema": "master",
@@ -288,7 +332,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_176": {
         "schema": "master",
@@ -304,7 +350,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_177": {
         "schema": "master",
@@ -319,7 +367,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_178": {
         "schema": "master",
@@ -334,7 +384,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_179": {
         "schema": "master",
@@ -354,7 +406,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_180": {
         "schema": "master",
@@ -369,7 +423,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_181": {
         "schema": "master",
@@ -389,7 +445,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_182": {
         "schema": "master",
@@ -404,7 +462,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_183": {
         "schema": "master",
@@ -424,7 +484,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_184": {
         "schema": "master",
@@ -439,7 +501,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_185": {
         "schema": "master",
@@ -454,7 +518,9 @@
             "validation": "isString",
             "required": 1
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_186": {
         "schema": "master",
@@ -469,7 +535,9 @@
             "validation": "isString",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_187": {
         "schema": "master",
@@ -484,7 +552,9 @@
             "validation": "isString",
             "required": 1
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_188": {
         "schema": "master",
@@ -499,7 +569,9 @@
             "validation": "isString",
             "required": 1
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_189": {
         "schema": "master",
@@ -514,7 +586,9 @@
             "validation": "isString",
             "required": 1
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_190": {
         "schema": "master",
@@ -529,7 +603,9 @@
             "validation": "isImage",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_191": {
         "schema": "master",
@@ -544,7 +620,9 @@
             "validation": "isString",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_192": {
         "schema": "master",
@@ -559,7 +637,9 @@
             "validation": "isNickName",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_15_193": {
         "schema": "master",
@@ -579,7 +659,9 @@
             "colDescription": "uuid",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_238": {
         "schema": "master",
@@ -595,7 +677,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_239": {
         "schema": "master",
@@ -610,7 +694,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_240": {
         "schema": "master",
@@ -625,7 +711,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_241": {
         "schema": "master",
@@ -645,7 +733,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_242": {
         "schema": "master",
@@ -660,7 +750,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_243": {
         "schema": "master",
@@ -680,7 +772,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_244": {
         "schema": "master",
@@ -695,7 +789,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_245": {
         "schema": "master",
@@ -715,7 +811,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_247": {
         "schema": "master",
@@ -730,7 +828,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_246": {
         "schema": "master",
@@ -746,7 +846,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_249": {
         "schema": "master",
@@ -762,7 +864,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_248": {
         "schema": "master",
@@ -782,7 +886,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_250": {
         "schema": "master",
@@ -798,7 +904,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_251": {
         "schema": "master",
@@ -814,7 +922,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_252": {
         "schema": "master",
@@ -830,7 +940,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_20_253": {
         "schema": "master",
@@ -846,7 +958,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_194": {
         "schema": "master",
@@ -862,7 +976,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_195": {
         "schema": "master",
@@ -877,7 +993,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_196": {
         "schema": "master",
@@ -892,7 +1010,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_197": {
         "schema": "master",
@@ -912,7 +1032,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_198": {
         "schema": "master",
@@ -927,7 +1049,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_199": {
         "schema": "master",
@@ -947,7 +1071,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_200": {
         "schema": "master",
@@ -962,7 +1088,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_202": {
         "schema": "master",
@@ -982,7 +1110,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_201": {
         "schema": "master",
@@ -997,7 +1127,9 @@
             "validation": "isNickName",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_203": {
         "schema": "master",
@@ -1030,7 +1162,9 @@
             ],
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_16_204": {
         "schema": "master",
@@ -1045,7 +1179,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_255": {
         "schema": "master",
@@ -1061,7 +1197,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_254": {
         "schema": "master",
@@ -1080,7 +1218,9 @@
             "required": "0",
             "colDescription": "description"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_256": {
         "schema": "master",
@@ -1095,7 +1235,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_257": {
         "schema": "master",
@@ -1110,7 +1252,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_258": {
         "schema": "master",
@@ -1130,7 +1274,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_259": {
         "schema": "master",
@@ -1145,7 +1291,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_260": {
         "schema": "master",
@@ -1165,7 +1313,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_261": {
         "schema": "master",
@@ -1180,7 +1330,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_263": {
         "schema": "master",
@@ -1195,7 +1347,9 @@
             "validation": "isNickName",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_262": {
         "schema": "master",
@@ -1215,7 +1369,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_264": {
         "schema": "master",
@@ -1230,7 +1386,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_265": {
         "schema": "master",
@@ -1249,7 +1407,9 @@
             "required": "0",
             "colDescription": "description"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_21_266": {
         "schema": "master",
@@ -1282,7 +1442,9 @@
             ],
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_280": {
         "schema": "master",
@@ -1298,7 +1460,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_281": {
         "schema": "master",
@@ -1313,7 +1477,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_282": {
         "schema": "master",
@@ -1328,7 +1494,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_283": {
         "schema": "master",
@@ -1348,7 +1516,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_284": {
         "schema": "master",
@@ -1363,7 +1533,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_285": {
         "schema": "master",
@@ -1383,7 +1555,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_286": {
         "schema": "master",
@@ -1398,7 +1572,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_287": {
         "schema": "master",
@@ -1418,7 +1594,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_288": {
         "schema": "master",
@@ -1433,7 +1611,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_289": {
         "schema": "master",
@@ -1448,7 +1628,9 @@
             "validation": "isString",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_290": {
         "schema": "master",
@@ -1463,7 +1645,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_291": {
         "schema": "master",
@@ -1478,7 +1662,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_23_292": {
         "schema": "master",
@@ -1498,7 +1684,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_205": {
         "schema": "master",
@@ -1514,7 +1702,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_206": {
         "schema": "master",
@@ -1529,7 +1719,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_207": {
         "schema": "master",
@@ -1544,7 +1736,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_208": {
         "schema": "master",
@@ -1564,7 +1758,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_209": {
         "schema": "master",
@@ -1579,7 +1775,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_210": {
         "schema": "master",
@@ -1599,7 +1797,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_211": {
         "schema": "master",
@@ -1614,7 +1814,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_212": {
         "schema": "master",
@@ -1634,7 +1836,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_213": {
         "schema": "master",
@@ -1650,7 +1854,9 @@
             "type": "CHARACTER VARYING",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_215": {
         "schema": "master",
@@ -1670,7 +1876,9 @@
             "type": "TEXT",
             "Schema": "transaction"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_17_214": {
         "schema": "master",
@@ -1685,7 +1893,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_267": {
         "schema": "master",
@@ -1701,7 +1911,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_268": {
         "schema": "master",
@@ -1716,7 +1928,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_270": {
         "schema": "master",
@@ -1731,7 +1945,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_269": {
         "schema": "master",
@@ -1746,7 +1962,9 @@
             "validation": "isString",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_272": {
         "schema": "master",
@@ -1766,7 +1984,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_271": {
         "schema": "master",
@@ -1781,7 +2001,9 @@
             "validation": "isDateTime",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_273": {
         "schema": "master",
@@ -1796,7 +2018,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_274": {
         "schema": "master",
@@ -1811,7 +2035,9 @@
             "validation": "isDateTime",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_275": {
         "schema": "master",
@@ -1831,7 +2057,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_276": {
         "schema": "master",
@@ -1846,7 +2074,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_277": {
         "schema": "master",
@@ -1866,7 +2096,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_278": {
         "schema": "master",
@@ -1881,7 +2113,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_22_279": {
         "schema": "master",
@@ -1901,7 +2135,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_216": {
         "schema": "master",
@@ -1917,7 +2153,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_217": {
         "schema": "master",
@@ -1932,7 +2170,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_218": {
         "schema": "master",
@@ -1947,7 +2187,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_219": {
         "schema": "master",
@@ -1967,7 +2209,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_220": {
         "schema": "master",
@@ -1982,7 +2226,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_221": {
         "schema": "master",
@@ -2002,7 +2248,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_222": {
         "schema": "master",
@@ -2017,7 +2265,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_223": {
         "schema": "master",
@@ -2037,7 +2287,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_224": {
         "schema": "master",
@@ -2052,7 +2304,9 @@
             "validation": "isString",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_226": {
         "schema": "master",
@@ -2067,7 +2321,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_18_225": {
         "schema": "master",
@@ -2082,7 +2338,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_227": {
         "schema": "master",
@@ -2098,7 +2356,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_228": {
         "schema": "master",
@@ -2113,7 +2373,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_229": {
         "schema": "master",
@@ -2128,7 +2390,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_230": {
         "schema": "master",
@@ -2148,7 +2412,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_231": {
         "schema": "master",
@@ -2163,7 +2429,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_232": {
         "schema": "master",
@@ -2183,7 +2451,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_233": {
         "schema": "master",
@@ -2198,7 +2468,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_234": {
         "schema": "master",
@@ -2218,7 +2490,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_235": {
         "schema": "master",
@@ -2239,7 +2513,9 @@
             "default": "",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_237": {
         "schema": "master",
@@ -2254,7 +2530,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_19_236": {
         "schema": "master",
@@ -2269,7 +2547,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_293": {
         "schema": "master",
@@ -2285,7 +2565,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_294": {
         "schema": "master",
@@ -2300,7 +2582,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_295": {
         "schema": "master",
@@ -2315,7 +2599,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_296": {
         "schema": "master",
@@ -2335,7 +2621,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_297": {
         "schema": "master",
@@ -2350,7 +2638,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_298": {
         "schema": "master",
@@ -2370,7 +2660,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_299": {
         "schema": "master",
@@ -2385,7 +2677,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_300": {
         "schema": "master",
@@ -2405,7 +2699,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_301": {
         "schema": "master",
@@ -2420,7 +2716,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_302": {
         "schema": "master",
@@ -2439,7 +2737,9 @@
             "required": "0",
             "colDescription": "description"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_24_303": {
         "schema": "master",
@@ -2459,7 +2759,9 @@
             "colDescription": "description",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_304": {
         "schema": "master",
@@ -2475,7 +2777,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_305": {
         "schema": "master",
@@ -2490,7 +2794,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_306": {
         "schema": "master",
@@ -2505,7 +2811,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_307": {
         "schema": "master",
@@ -2525,7 +2833,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_308": {
         "schema": "master",
@@ -2540,7 +2850,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_309": {
         "schema": "master",
@@ -2560,7 +2872,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_310": {
         "schema": "master",
@@ -2575,7 +2889,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_311": {
         "schema": "master",
@@ -2595,7 +2911,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_312": {
         "schema": "master",
@@ -2610,7 +2928,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_313": {
         "schema": "master",
@@ -2630,7 +2950,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_25_314": {
         "schema": "master",
@@ -2650,7 +2972,9 @@
             "required": "1",
             "colDescription": "description"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_344": {
         "schema": "master",
@@ -2666,7 +2990,9 @@
             "required": 1,
             "primary_key": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_345": {
         "schema": "master",
@@ -2681,7 +3007,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_346": {
         "schema": "master",
@@ -2696,7 +3024,9 @@
             "validation": "isInteger",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_347": {
         "schema": "master",
@@ -2716,7 +3046,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_348": {
         "schema": "master",
@@ -2731,7 +3063,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_349": {
         "schema": "master",
@@ -2751,7 +3085,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_350": {
         "schema": "master",
@@ -2766,7 +3102,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_351": {
         "schema": "master",
@@ -2786,7 +3124,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_352": {
         "schema": "master",
@@ -2801,7 +3141,9 @@
             "validation": "isDateTime",
             "required": 0
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_353": {
         "schema": "master",
@@ -2821,7 +3163,9 @@
             "colDescription": "middle_names",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_354": {
         "schema": "master",
@@ -2836,7 +3180,9 @@
             "validation": "isString",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_355": {
         "schema": "master",
@@ -2851,7 +3197,9 @@
             "validation": "isDateTime",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_356": {
         "schema": "master",
@@ -2866,7 +3214,9 @@
             "validation": "isDateTime",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_357": {
         "schema": "master",
@@ -2881,7 +3231,9 @@
             "validation": "isDateTime",
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_358": {
         "schema": "master",
@@ -2910,7 +3262,9 @@
             ],
             "required": "1"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_359": {
         "schema": "master",
@@ -2926,7 +3280,9 @@
             "type": "TEXT",
             "validation": "isString"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_360": {
         "schema": "master",
@@ -2941,7 +3297,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_361": {
         "schema": "master",
@@ -2956,7 +3314,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_362": {
         "schema": "master",
@@ -2971,7 +3331,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_363": {
         "schema": "master",
@@ -2986,7 +3348,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_364": {
         "schema": "master",
@@ -3001,7 +3365,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_365": {
         "schema": "master",
@@ -3016,7 +3382,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_366": {
         "schema": "master",
@@ -3031,7 +3399,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_367": {
         "schema": "master",
@@ -3046,7 +3416,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_368": {
         "schema": "master",
@@ -3061,7 +3433,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_369": {
         "schema": "master",
@@ -3076,7 +3450,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_370": {
         "schema": "master",
@@ -3091,7 +3467,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_371": {
         "schema": "master",
@@ -3106,7 +3484,9 @@
             "validation": "isString",
             "required": "0"
         },
-        "status": {}
+        "status": {
+            "stt": "NoAlter"
+        }
     },
     "2_26_372": {
         "schema": "master",
@@ -3120,6 +3500,1009 @@
             "type": "BOOLEAN",
             "validation": "isBoolean",
             "required": "0"
+        },
+        "status": {
+            "stt": "NoAlter"
+        }
+    },
+    "3": {
+        "ordering": 2,
+        "key": "3",
+        "query": "CREATE SCHEMA IF NOT EXISTS tickets",
+        "params": {
+            "object": "schema",
+            "name": "tickets"
+        },
+        "status": {}
+    },
+    "3_27": {
+        "ordering": 1,
+        "key": "3_27",
+        "query": "CREATE TABLE IF NOT EXISTS tickets.promoter ()",
+        "params": {
+            "object": "table",
+            "name": "promoter"
+        },
+        "status": {}
+    },
+    "3_28": {
+        "ordering": 2,
+        "key": "3_28",
+        "query": "CREATE TABLE IF NOT EXISTS tickets.event ()",
+        "params": {
+            "object": "table",
+            "name": "event"
+        },
+        "status": {}
+    },
+    "3_29": {
+        "ordering": 3,
+        "key": "3_29",
+        "query": "CREATE TABLE IF NOT EXISTS tickets.ticket ()",
+        "params": {
+            "object": "table",
+            "name": "ticket"
+        },
+        "status": {}
+    },
+    "3_30": {
+        "ordering": 4,
+        "key": "3_30",
+        "query": "CREATE TABLE IF NOT EXISTS tickets.coupon ()",
+        "params": {
+            "object": "table",
+            "name": "coupon"
+        },
+        "status": {}
+    },
+    "3_31": {
+        "ordering": 5,
+        "key": "3_31",
+        "query": "CREATE TABLE IF NOT EXISTS tickets.sale ()",
+        "params": {
+            "object": "table",
+            "name": "sale"
+        },
+        "status": {}
+    },
+    "3_27_373": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 1,
+        "key": "3_27_373",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "3_27_374": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 2,
+        "key": "3_27_374",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_27_375": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 3,
+        "key": "3_27_375",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_27_376": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 4,
+        "key": "3_27_376",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_27_377": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 5,
+        "key": "3_27_377",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_27_378": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 6,
+        "key": "3_27_378",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_27_379": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 7,
+        "key": "3_27_379",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_27_380": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 8,
+        "key": "3_27_380",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_27_381": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 9,
+        "key": "3_27_381",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_27_425": {
+        "schema": "tickets",
+        "table": "promoter",
+        "ordering": 10,
+        "key": "3_27_425",
+        "query": "ALTER TABLE tickets.promoter ADD COLUMN name CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "name",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "3_28_382": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 1,
+        "key": "3_28_382",
+        "query": "ALTER TABLE tickets.event ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "3_28_383": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 2,
+        "key": "3_28_383",
+        "query": "ALTER TABLE tickets.event ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_28_384": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 3,
+        "key": "3_28_384",
+        "query": "ALTER TABLE tickets.event ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_28_385": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 4,
+        "key": "3_28_385",
+        "query": "ALTER TABLE tickets.event ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_28_386": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 5,
+        "key": "3_28_386",
+        "query": "ALTER TABLE tickets.event ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_28_387": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 6,
+        "key": "3_28_387",
+        "query": "ALTER TABLE tickets.event ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_28_388": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 7,
+        "key": "3_28_388",
+        "query": "ALTER TABLE tickets.event ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_28_389": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 8,
+        "key": "3_28_389",
+        "query": "ALTER TABLE tickets.event ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_28_390": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 9,
+        "key": "3_28_390",
+        "query": "ALTER TABLE tickets.event ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_28_411": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 10,
+        "key": "3_28_411",
+        "query": "ALTER TABLE tickets.event ADD COLUMN id_promoter BIGINT",
+        "params": {
+            "object": "column",
+            "name": "id_promoter",
+            "type": "BIGINT",
+            "Table": "promoter",
+            "Schema": "tickets",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "0",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "3_28_426": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 11,
+        "key": "3_28_426",
+        "query": "ALTER TABLE tickets.event ADD COLUMN title CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "title",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "3_28_427": {
+        "schema": "tickets",
+        "table": "event",
+        "ordering": 12,
+        "key": "3_28_427",
+        "query": "ALTER TABLE tickets.event ADD COLUMN description TEXT",
+        "params": {
+            "object": "column",
+            "name": "description",
+            "type": "TEXT",
+            "validation": "isString",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_29_391": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 1,
+        "key": "3_29_391",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "3_29_392": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 2,
+        "key": "3_29_392",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_29_393": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 3,
+        "key": "3_29_393",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_29_394": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 4,
+        "key": "3_29_394",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_29_395": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 5,
+        "key": "3_29_395",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_29_396": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 6,
+        "key": "3_29_396",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_29_397": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 7,
+        "key": "3_29_397",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_29_398": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 8,
+        "key": "3_29_398",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_29_399": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 9,
+        "key": "3_29_399",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_29_410": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 10,
+        "key": "3_29_410",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN id_promoter BIGINT",
+        "params": {
+            "object": "column",
+            "name": "id_promoter",
+            "type": "BIGINT",
+            "Table": "promoter",
+            "Schema": "tickets",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "0",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "3_29_428": {
+        "schema": "tickets",
+        "table": "ticket",
+        "ordering": 11,
+        "key": "3_29_428",
+        "query": "ALTER TABLE tickets.ticket ADD COLUMN price NUMERIC",
+        "params": {
+            "object": "column",
+            "name": "price",
+            "type": "NUMERIC",
+            "validation": "isMoney",
+            "length": "10",
+            "precision": "3",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_30_400": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 1,
+        "key": "3_30_400",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "3_30_401": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 2,
+        "key": "3_30_401",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_30_402": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 3,
+        "key": "3_30_402",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_30_403": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 4,
+        "key": "3_30_403",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_30_404": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 5,
+        "key": "3_30_404",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_30_405": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 6,
+        "key": "3_30_405",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_30_406": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 7,
+        "key": "3_30_406",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_30_407": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 8,
+        "key": "3_30_407",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_30_408": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 9,
+        "key": "3_30_408",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_30_409": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 10,
+        "key": "3_30_409",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN id_promoter BIGINT",
+        "params": {
+            "object": "column",
+            "name": "id_promoter",
+            "type": "BIGINT",
+            "Table": "promoter",
+            "Schema": "tickets",
+            "colLabel": "title",
+            "colValue": "id",
+            "required": "0",
+            "colDescription": "description"
+        },
+        "status": {}
+    },
+    "3_30_429": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 11,
+        "key": "3_30_429",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN code CHARACTER VARYING NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "code",
+            "type": "CHARACTER VARYING",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "3_31_412": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 1,
+        "key": "3_31_412",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN id SERIAL PRIMARY KEY",
+        "params": {
+            "object": "column",
+            "name": "id",
+            "type": "SERIAL",
+            "validation": "isInteger",
+            "required": 1,
+            "primary_key": "1"
+        },
+        "status": {}
+    },
+    "3_31_413": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 2,
+        "key": "3_31_413",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN ordering SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "ordering",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_31_414": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 3,
+        "key": "3_31_414",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN state SMALLINT",
+        "params": {
+            "object": "column",
+            "name": "state",
+            "type": "SMALLINT",
+            "validation": "isInteger",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_31_415": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 4,
+        "key": "3_31_415",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN checked_out INTEGER",
+        "params": {
+            "object": "column",
+            "name": "checked_out",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_31_416": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 5,
+        "key": "3_31_416",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN checked_out_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "checked_out_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_31_417": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 6,
+        "key": "3_31_417",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN created_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "created_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_31_418": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 7,
+        "key": "3_31_418",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN created_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "created_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_31_419": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 8,
+        "key": "3_31_419",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN modified_by INTEGER",
+        "params": {
+            "object": "column",
+            "name": "modified_by",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "master",
+            "Table": "user",
+            "colLabel": "id",
+            "colValue": "first_name",
+            "colDescription": "middle_names",
+            "required": "0"
+        },
+        "status": {}
+    },
+    "3_31_420": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 9,
+        "key": "3_31_420",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN modified_time TIMESTAMP WITHOUT TIME ZONE",
+        "params": {
+            "object": "column",
+            "name": "modified_time",
+            "type": "TIMESTAMP WITHOUT TIME ZONE",
+            "validation": "isDateTime",
+            "required": 0
+        },
+        "status": {}
+    },
+    "3_31_422": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 11,
+        "key": "3_31_422",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN id_promoter INTEGER NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "id_promoter",
+            "type": "INTEGER",
+            "validation": "isInteger",
+            "Schema": "tickets",
+            "Table": "promoter",
+            "colLabel": "id",
+            "colValue": "id",
+            "colDescription": "id",
+            "required": 1
+        },
+        "status": {}
+    },
+    "3_31_423": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 12,
+        "key": "3_31_423",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN amount SMALLINT NOT NULL",
+        "params": {
+            "object": "column",
+            "name": "amount",
+            "type": "SMALLINT",
+            "validation": "isString",
+            "required": 1
+        },
+        "status": {}
+    },
+    "3_31_424": {
+        "schema": "tickets",
+        "table": "sale",
+        "ordering": 13,
+        "key": "3_31_424",
+        "query": "ALTER TABLE tickets.sale ADD COLUMN total NUMERIC",
+        "params": {
+            "object": "column",
+            "name": "total",
+            "type": "NUMERIC",
+            "validation": "isString",
+            "length": "10",
+            "precision": "3",
+            "required": 0
         },
         "status": {}
     }

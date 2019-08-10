@@ -36,6 +36,12 @@ var menus = [
 		layout: "/admin"
 	},
 	{
+		path: "/TicketsPromoter/ListItems",
+		name: "List Promotoras",
+		icon: "ni ni-bullet-list-67 text-red",
+		layout: "/admin"
+	},
+	{
 		path: "/index",
 		name: "Dashboard",
 		icon: "ni ni-tv-2 text-primary",

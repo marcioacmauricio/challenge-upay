@@ -11,5 +11,10 @@ from api.routes.MasterUserGroupRoute import MasterUserGroupRoute
 from api.routes.MasterUserGroupResourceRoute import MasterUserGroupResourceRoute
 from api.routes.MasterUserUserGroupRoute import MasterUserUserGroupRoute
 from api.routes.MasterAuthenticationRoute import MasterAuthenticationRoute
+from api.routes.TicketsPromoterRoute import TicketsPromoterRoute
+from api.routes.TicketsEventRoute import TicketsEventRoute
+from api.routes.TicketsTicketRoute import TicketsTicketRoute
+from api.routes.TicketsCouponRoute import TicketsCouponRoute
+from api.routes.TicketsSaleRoute import TicketsSaleRoute
 from api.routes.Helpers import Helpers
 from api.routes.Register import Register
