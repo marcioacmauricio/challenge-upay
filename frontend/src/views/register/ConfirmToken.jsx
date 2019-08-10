@@ -33,7 +33,7 @@ class ConfirmToken extends React.Component {
 		this.props.confirmTokenMail(Post)
 	}
 	componentWillReceiveProps(nextProps) {
-		// debugger
+		debugger
 		this.setState({ Status: nextProps.Payload.Status, Message: nextProps.Payload.Message })
 	}
 
@@ -70,7 +70,7 @@ class ConfirmToken extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.Register.item
+		Payload: state.Register.tokem_mail
 	}
 	
 }

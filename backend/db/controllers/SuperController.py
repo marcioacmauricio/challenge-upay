@@ -191,11 +191,14 @@ class SuperController(dict):
 
 		for ColumnName, ColumnConfig in self.Columns.items():
 			if isUpdate and ColumnConfig.get('field_type') == 'ModifiedBy':
-				self[ColumnName] = self.User.get('sub')
+				if self.get(ColumnName) is None:
+					self[ColumnName] = self.User.get('sub')
 			elif not isUpdate and ColumnConfig.get('field_type') == 'CreatedBy':
-				self[ColumnName] = self.User.get('sub')	
+				if self.get(ColumnName) is None:
+					self[ColumnName] = self.User.get('sub')	
 			elif not isUpdate and ColumnConfig.get('field_type') == 'State':
-				self[ColumnName] = 1		
+				if self.get(ColumnName) is None:
+					self[ColumnName] = 0		
 			Parameters = ColumnConfig.get('parameters')
 			Required = False
 			try:

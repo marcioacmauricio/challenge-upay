@@ -77,7 +77,7 @@ class Login extends React.Component {
 				} else {
 					newState.isLoged = false
 				}				
-				newState.User = nextProps.User.Item
+				newState.User = nextProps.auth.getUser()
 				newState.UserAutenticated = true
 				this.setState(newState)
 			}
@@ -152,7 +152,7 @@ class Login extends React.Component {
 								</Row>
 								<div className="text-center">
 									<h3>
-										{this.state.User.first_name}
+										{this.state.User.unm}
 										<span className="font-weight-light">, Idade</span>
 									</h3>
 									<div className="h5 font-weight-300">

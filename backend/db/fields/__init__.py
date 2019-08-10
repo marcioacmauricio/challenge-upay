@@ -24,3 +24,5 @@ from db.fields.Attributes import Attributes
 from db.fields.Boolean import Boolean
 from db.fields.Image import Image
 from db.fields.Numeric import Numeric
+from db.fields.UpdatedTime import UpdatedTime
+from db.fields.CreatedTime import CreatedTime

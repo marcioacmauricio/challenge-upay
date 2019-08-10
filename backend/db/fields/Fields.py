@@ -24,5 +24,7 @@ Fields = {
 	"Attributes": Attributes(),
 	"Boolean": Boolean(),
 	"Image": Image(),
-	"Numeric": Numeric()
+	"Numeric": Numeric(),
+	"UpdatedTime": UpdatedTime(),
+	"CreatedTime": CreatedTime()
 }

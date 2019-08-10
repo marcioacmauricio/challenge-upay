@@ -12,6 +12,8 @@ class JwtAuth:
 		self.decode(Authorization)
 	def decode(self, Authorization):
 		parts = Authorization.split()
+		if len(parts) <= 1:
+			return
 		Bearer = parts[1]
 		if bool(Bearer):
 			try:

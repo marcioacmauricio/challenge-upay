@@ -80,12 +80,21 @@ class RegisterHelper(object):
 			print(Authentication.Errors)
 			return {}
 	def Authenticate(self, Data, Header):
+		Return = {
+			"Status": False, 
+			"Errors": {
+				"Auth": ""
+			}, 
+			"Items": {}, 
+			"Item": {}, 
+			"Message": ""
+		}
 		User = self.DB.getEntity('MasterUser')
 		User.load(Keys = ['email'], Values = [Data.get('login')])
 		if bool(User.get('id')):
 			if bcrypt.checkpw(Data.get('password').encode('utf-8'), User.get('password').encode('utf-8')):
 				return self.CreateAuthentication(User, Header)					
-		return {}
+		return Return
 	def refreshToken(self, Header):
 		Return = {
 			'Status': False,
@@ -122,6 +131,7 @@ class RegisterHelper(object):
 			"Message": ""
 		}		
 		Authentication = self.DB.getEntity('MasterAuthentication')
+		print(Authentication)
 		Authentication['id'] = Data.get('jti') 
 		Authentication['status_logged'] = 3
 		Authentication.save('id')
@@ -232,6 +242,7 @@ class RegisterHelper(object):
 			"Status": True,
 			"Message": "Seu e-mail foi confirmado com sucesso!"
 		}
+
 		MailConfirmation = self.DB.getEntity('MasterMailConfirmation')
 		MailConfirmation.load(Keys = ['token'], Values = [Data.get('Token')])
 		if not MailConfirmation.Status:
@@ -257,7 +268,7 @@ class RegisterHelper(object):
 			}
 			return Return
 
-		User['state'] = 1
+		User['state'] = 2
 		User.save('id')
 
 		if not User.Status:

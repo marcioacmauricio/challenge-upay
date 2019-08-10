@@ -40,11 +40,11 @@ export default function (state = initialState, action) {
 			return newState
 
 		case REGISTER_USER: 
-			newState.login = {...action.payload, params: action.params}
+			newState.register = {...action.payload, params: action.params}
 			return newState
 
 		case CONFIRM_TOKEM_MAIL: 
-			newState.login = {...action.payload, params: action.params}
+			newState.tokem_mail = {...action.payload, params: action.params}
 			return newState
 
 		case RECOVER_PASSWORD: 

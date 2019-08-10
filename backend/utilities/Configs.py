@@ -1,10 +1,10 @@
 ConfigMail = {
 	'Server': 'smtp.gmail.com',
 	'Port': '587',
-	'Login': 'dinheirow.dev@gmail.com',
-	'Password': 'd1nh31r0w_d3vs',
-	'FromName': 'Dinheirow',
-	'FromEmail': 'dinheirow.dev@gmail.com',
+	'Login': 'matrisys.me@gmail.com',
+	'Password': ',$ea&~HN&4Juecc',
+	'FromName': 'Matrisys',
+	'FromEmail': 'matrisys.me@gmail.com',
 	'ContentHtml': 1
 }
 EnterpriseConfiguration = {
