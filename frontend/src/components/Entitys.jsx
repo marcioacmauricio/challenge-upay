@@ -72,7 +72,7 @@ const Entitys = {
     "TicketsEvent": {
         "id": 0,
         "Title": "Eventos",
-        "EntityPredesc": "TicketsPromoter"
+        "EntityPredesc": ""
     },
     "TicketsTicket": {
         "id": 0,
@@ -88,6 +88,16 @@ const Entitys = {
         "id": 0,
         "Title": "Meus Tickets",
         "EntityPredesc": "MasterUser"
+    },
+    "TicketsCart": {
+        "id": 0,
+        "Title": "Carrinho",
+        "EntityPredesc": "MasterUser"
+    },
+    "TicketsCartItem": {
+        "id": 0,
+        "Title": "Item de Carrinho",
+        "EntityPredesc": "TicketsCart"
     }
 }
 export default Entitys

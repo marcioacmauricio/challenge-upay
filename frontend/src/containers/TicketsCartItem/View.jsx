@@ -2,25 +2,25 @@ import React from 'react';
 import { Card, CardHeader, CardFooter, CardBody, CardTitle, CardText, Alert, Container, Table } from 'reactstrap';
 import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap';
-import { readTicketsPromoter } from 'reducers/TicketsPromoter/Actions'
+import { readTicketsCartItem } from 'reducers/TicketsCartItem/Actions'
 import { connect } from 'react-redux'
-import TicketsPromoterModel from 'models/TicketsPromoterModel'
+import TicketsCartItemModel from 'models/TicketsCartItemModel'
 import Fields from 'fields/Fields'
 import { MenuHeader, HeaderAdmin } from 'components/Headers'
 
 
-class TicketsPromoterView extends React.Component {
+class TicketsCartItemView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'name', 'title']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_cart', 'id_event', 'amount', 'total']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
-		this.ColumnFKPredesc = ''
-		this.TableShemaPredesc = ''		
+		this.ColumnFKPredesc = 'id_cart'
+		this.TableShemaPredesc = 'TicketsCart'		
 		for (let i = 0; i < this.ColumnsList.length; i++){
 			let ColumnName = this.ColumnsList[i]
-			ColumnData = TicketsPromoterModel.columns[ColumnName]
+			ColumnData = TicketsCartItemModel.columns[ColumnName]
 			Item[ColumnData.nickname] = ColumnData.parameters.default
 			this.ColumnsFields[ColumnName] = Fields(ColumnData, this.onChange)
 		}			
@@ -39,7 +39,7 @@ class TicketsPromoterView extends React.Component {
 			let Posts = {
 				Id: this.props.match.params.id
 			}
-			this.props.readTicketsPromoter(Posts);
+			this.props.readTicketsCartItem(Posts);
 		}		
 	}
 	componentWillReceiveProps(nextProps) {
@@ -71,7 +71,7 @@ class TicketsPromoterView extends React.Component {
 			let Value = this.state.Item[ColumnName]
 			let Field = this.ColumnsFields[ColumnName]
 			let ValueShow = Field.OutPutShow(Value)
-			let ColumnData = TicketsPromoterModel.columns[ColumnName]
+			let ColumnData = TicketsCartItemModel.columns[ColumnName]
 			Rows.push(<tr key={ColumnName}>
 					<th scope="row">{ColumnData.title}</th>
 					<td>{ValueShow}</td>
@@ -86,7 +86,11 @@ class TicketsPromoterView extends React.Component {
 			</Table>
 		)	
 	}	
-	render() {	
+	render() {
+		let ItemValue = ''
+		if (typeof this.state.Item[this.ColumnFKPredesc] === 'object'){
+			ItemValue = this.state.Item[this.ColumnFKPredesc].value
+		}	
 	
 		return (
 			<>
@@ -95,14 +99,14 @@ class TicketsPromoterView extends React.Component {
 					<div className="col">
 						<Card className="shadow">
 							<CardHeader className="border-0">
-								<MenuHeader getItem={this.getItem.bind(this)} Entity="TicketsPromoter" ItemValue={ this.state.Item.id } ItemLabel={ this.state.Item.id } View="View" />	    				
+								<MenuHeader getItem={this.getItem.bind(this)} Entity="TicketsCartItem" ItemValue={ this.state.Item.id } ItemLabel={ this.state.Item.id } View="View" />	    				
 							</CardHeader>
 							<CardBody>
-								<CardTitle><h2>Promotoras</h2></CardTitle>
+								<CardTitle><h2>Item de Carrinho</h2></CardTitle>
 								<CardText tag="div" >{this.renderColumns()}</CardText>
 							</CardBody>
 							<CardFooter>
-								<Button outline color="success" className="float-right" ><Link to='/Admin/TicketsPromoter/ListItems'>Lista</Link></Button>							    
+								<Button outline color="success" className="float-right" ><Link to={`/Admin/TicketsCartItem/ListItems/TicketsCart/${ItemValue}`}>Lista</Link></Button>							    
 							</CardFooter>
 						</Card>
 					</div>
@@ -113,8 +117,8 @@ class TicketsPromoterView extends React.Component {
 }
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.TicketsPromoterReducer.item
+		Payload: state.TicketsCartItemReducer.item
 	}
 	
 }
-export default connect(mapStateToProps, {readTicketsPromoter})(TicketsPromoterView);
+export default connect(mapStateToProps, {readTicketsCartItem})(TicketsCartItemView);

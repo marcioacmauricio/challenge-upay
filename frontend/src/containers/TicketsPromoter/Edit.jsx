@@ -9,7 +9,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class TicketsPromoterEdit extends React.Component {
 	constructor() {
 		super()
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'name']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'name', 'title']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
@@ -135,6 +135,7 @@ class TicketsPromoterEdit extends React.Component {
 									<Form>
 										{this.renderField('created_time')}
 										{this.renderField('name')}
+										{this.renderField('title')}
 									</Form>
 								</CardText>
 							</CardBody>

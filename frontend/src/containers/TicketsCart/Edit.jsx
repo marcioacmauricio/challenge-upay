@@ -2,19 +2,19 @@ import React from 'react'
 import { ButtonGroup, Col, Form, Card, Button, CardHeader, CardFooter, CardBody, CardTitle, CardText, Alert, FormGroup, Label, Container } from 'reactstrap'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { createTicketsEvent, readTicketsEvent, updateTicketsEvent } from 'reducers/TicketsEvent/Actions'
-import TicketsEventModel from 'models/TicketsEventModel'
+import { createTicketsCart, readTicketsCart, updateTicketsCart } from 'reducers/TicketsCart/Actions'
+import TicketsCartModel from 'models/TicketsCartModel'
 import Fields from 'fields/Fields'
 import { MenuHeader, HeaderAdmin } from 'components/Headers'
-class TicketsEventEdit extends React.Component {
+class TicketsCartEdit extends React.Component {
 	constructor() {
 		super()
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'title', 'image', 'description']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_coupon', 'total']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
-		this.ColumnFKPredesc = ''
-		this.TableShemaPredesc = ''
+		this.ColumnFKPredesc = 'id_user'
+		this.TableShemaPredesc = 'TicketsUser'
 
 
 		this.onChange = this.onChange.bind(this)
@@ -25,7 +25,7 @@ class TicketsEventEdit extends React.Component {
 		
 		for (let i = 0; i < this.ColumnsList.length; i++){
 			let ColumnName = this.ColumnsList[i]
-			ColumnData = TicketsEventModel.columns[ColumnName]
+			ColumnData = TicketsCartModel.columns[ColumnName]
 			let Field = Fields( ColumnData, this.onChange )
 			Item[ColumnData.nickname] = Field.getDefault()
 			this.ColumnsFields[ColumnName] = Field
@@ -47,9 +47,9 @@ class TicketsEventEdit extends React.Component {
 			Values[ColumnName] = Field.OutPut(this.state.Item[ColumnName])
 		}
 		if (this.props.match.params.id > 0){
-			this.props.updateTicketsEvent(Values);
+			this.props.updateTicketsCart(Values);
 		} else {
-			this.props.createTicketsEvent(Values);
+			this.props.createTicketsCart(Values);
 		}
 		e.preventDefault();	   
 	}
@@ -58,7 +58,7 @@ class TicketsEventEdit extends React.Component {
 			let Posts = {
 				Id: this.props.match.params.id
 			}
-			this.props.readTicketsEvent( Posts );
+			this.props.readTicketsCart( Posts );
 		} else {
 			if (this.ColumnFKPredesc !== ""){
 				let newState = { ...this.state }
@@ -72,7 +72,7 @@ class TicketsEventEdit extends React.Component {
 	componentWillReceiveProps(nextProps) {
 		if (( this.props.match.params.EntityPredesc !== "" ) && ( this.props.match.params.EntityPredesc !== undefined ) && ( this.props.match.params.EntityPredesc !== null ) && (nextProps.Payload.Item !== null)){
 			if (nextProps.Payload.Item.id > 0){
-				this.props.history.push(`/Admin/TicketsEvent/EditItem/${nextProps.Payload.Item.id}`)
+				this.props.history.push(`/Admin/TicketsCart/EditItem/${nextProps.Payload.Item.id}`)
 				return
 			}			
 		}
@@ -102,7 +102,7 @@ class TicketsEventEdit extends React.Component {
 		)
 	}
 	renderField(ColumnName){
-		let ColumnData = TicketsEventModel.columns[ColumnName]
+		let ColumnData = TicketsCartModel.columns[ColumnName]
 		return (
 			<FormGroup key={ColumnData.nickname} row>
 				<Label for={ColumnData.nickname} sm={2}>{ColumnData.title}</Label>
@@ -115,6 +115,13 @@ class TicketsEventEdit extends React.Component {
 	render() {
 		let ItemLabel = ""
 		let ItemValue = ''
+		if (this.props.match.params.id > 0){
+			if (typeof this.state.Item[this.ColumnFKPredesc] === 'object'){
+				ItemValue = this.state.Item[this.ColumnFKPredesc].value
+			}
+		} else {
+			ItemValue = this.props.match.params.IdPredesc
+		}
 		return (
 			<>   
 				<HeaderAdmin />				
@@ -122,10 +129,10 @@ class TicketsEventEdit extends React.Component {
 					<div className="col">
 						<Card className="shadow">
 							<CardHeader className="border-0">
-								<MenuHeader Entity="TicketsEvent" ItemValue={ItemValue} ItemLabel={ItemLabel} View="List" />
+								<MenuHeader Entity="TicketsCart" ItemValue={ItemValue} ItemLabel={ItemLabel} View="List" />
 								<ButtonGroup>
 								    <Button  onClick={this.onSubmit.bind(this)} outline color="success"><i className="fa fa-save" aria-hidden="true"></i> Salvar</Button>
-								    <Link className="btn btn-outline-info" to="/Admin/TicketsEvent/ListItems"><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
+							        <Link className="btn btn-outline-info" to={`/Admin/TicketsCart/ListItems/TicketsUser/${ItemValue}`}><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
 								</ButtonGroup>
 							</CardHeader>
 							<CardBody>
@@ -134,17 +141,15 @@ class TicketsEventEdit extends React.Component {
 									{this.renderAlert()}
 									<Form>
 										{this.renderField('created_time')}
-										{this.renderField('id_promoter')}
-										{this.renderField('title')}
-										{this.renderField('image')}
-										{this.renderField('description')}
+										{this.renderField('id_coupon')}
+										{this.renderField('total')}
 									</Form>
 								</CardText>
 							</CardBody>
 							<CardFooter>
 								<ButtonGroup>
 									<Button onClick={this.onSubmit.bind(this)} outline color="success"><i className="fa fa-save" aria-hidden="true"></i> Salvar</Button>
-						        	<Link className="btn btn-outline-info" to="/Admin/TicketsEvent/ListItems"><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
+							    	<Link className="btn btn-outline-info" to={`/Admin/TicketsCart/ListItems/TicketsUser/${ItemValue}`}><i className="fa fa-times" aria-hidden="true"></i> Fechar</Link>
 
 								</ButtonGroup>
 							</CardFooter>
@@ -158,8 +163,8 @@ class TicketsEventEdit extends React.Component {
 
 const mapStateToProps = (state, props) => {
 	return {
-		Payload: state.TicketsEventReducer.item
+		Payload: state.TicketsCartReducer.item
 	}
 	
 }
-export default connect(mapStateToProps, {readTicketsEvent, createTicketsEvent, updateTicketsEvent})(TicketsEventEdit);
+export default connect(mapStateToProps, {readTicketsCart, createTicketsCart, updateTicketsCart})(TicketsCartEdit);

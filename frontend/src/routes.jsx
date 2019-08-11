@@ -26,6 +26,8 @@ import { TicketsEventEdit, TicketsEventList, TicketsEventView } from 'containers
 import { TicketsTicketEdit, TicketsTicketList, TicketsTicketView } from 'containers/TicketsTicket'
 import { TicketsCouponEdit, TicketsCouponList, TicketsCouponView } from 'containers/TicketsCoupon'
 import { TicketsSaleEdit, TicketsSaleList, TicketsSaleView } from 'containers/TicketsSale'
+import { TicketsCartEdit, TicketsCartList, TicketsCartView } from 'containers/TicketsCart'
+import { TicketsCartItemEdit, TicketsCartItemList, TicketsCartItemView } from 'containers/TicketsCartItem'
 
 var routes = [
 	{
@@ -491,14 +493,14 @@ var routes = [
 		layout: "/admin"
 	},
 	{
-		path: "/TicketsEvent/ListItems/:EntityPredesc/:IdPredesc",
+		path: "/TicketsEvent/ListItems",
 		name: "List Eventos",
 		icon: "ni ni-bullet-list-67 text-red",
 		component: TicketsEventList,
-		layout: "/admin"		
+		layout: "/admin"
 	},
 	{
-		path: "/TicketsEvent/NewItem/:EntityPredesc/:IdPredesc",
+		path: "/TicketsEvent/NewItem",
 		name: "Add Eventos",
 		icon: "ni ni-bullet-list-67 text-red",
 		component: TicketsEventEdit,
@@ -600,6 +602,62 @@ var routes = [
 		name: "Edit Meus Tickets",
 		icon: "ni ni-bullet-list-67 text-red",
 		component: TicketsSaleEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCart/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartList,
+		layout: "/admin"		
+	},
+	{
+		path: "/TicketsCart/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCart/ShowItem/:id",
+		name: "View Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCart/EditItem/:id",
+		name: "Edit Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCartItem/ListItems/:EntityPredesc/:IdPredesc",
+		name: "List Item de Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartItemList,
+		layout: "/admin"		
+	},
+	{
+		path: "/TicketsCartItem/NewItem/:EntityPredesc/:IdPredesc",
+		name: "Add Item de Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartItemEdit,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCartItem/ShowItem/:id",
+		name: "View Item de Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartItemView,
+		layout: "/admin"
+	},
+	{
+		path: "/TicketsCartItem/EditItem/:id",
+		name: "Edit Item de Carrinho",
+		icon: "ni ni-bullet-list-67 text-red",
+		component: TicketsCartItemEdit,
 		layout: "/admin"
 	},
 ]

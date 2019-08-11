@@ -16,3 +16,5 @@ from db.controllers.TicketsEventController import TicketsEventController
 from db.controllers.TicketsTicketController import TicketsTicketController
 from db.controllers.TicketsCouponController import TicketsCouponController
 from db.controllers.TicketsSaleController import TicketsSaleController
+from db.controllers.TicketsCartController import TicketsCartController
+from db.controllers.TicketsCartItemController import TicketsCartItemController

@@ -40,8 +40,9 @@ class Helpers(tornado.web.RequestHandler):
 		Return['Items'] = {}
 		Helper = DatabaseHelpers(self.User)
 		if (self.data.get('Method') == 'getOptions'):
-			print(pretty(self.data))	
 			Return.update(Helper.getOptionsFK(self.data))
+		elif (self.data.get('Method') == 'addEvent'):
+			Return.update(Helper.addEvent(self.data))
 		else:
 			print(pretty(self.data))
 

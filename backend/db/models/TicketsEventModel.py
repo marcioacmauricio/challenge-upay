@@ -5,11 +5,11 @@ TicketsEventModel = {
     "table": "event",
     "title": "Eventos",
     "schema": "tickets",
-    "table_predesc": "promoter",
-    "schema_predesc": "tickets",
+    "table_predesc": "",
+    "schema_predesc": "",
     "sec_table_predesc": "",
     "sec_schema_predesc": "",
-    "main_table_schema": "TicketPromoter",
+    "main_table_schema": "",
     "sec_table_schema": "",
     "columns": {
         "id": {
@@ -131,7 +131,7 @@ TicketsEventModel = {
             "description": "Promotoras",
             "title": "Promotoras",
             "nickname": "id_promoter",
-            "field_type": "KeyDimension",
+            "field_type": "ForeignKey",
             "parameters": {
                 "type": "BIGINT",
                 "Table": "promoter",
@@ -153,6 +153,17 @@ TicketsEventModel = {
                 "required": 1
             }
         },
+        "image": {
+            "description": "Image",
+            "title": "Image",
+            "nickname": "image",
+            "field_type": "Image",
+            "parameters": {
+                "type": "TEXT",
+                "validation": "isImage",
+                "required": 0
+            }
+        },
         "description": {
             "description": "Descri\u00e7\u00e3o",
             "title": "Descri\u00e7\u00e3o",
@@ -161,6 +172,19 @@ TicketsEventModel = {
             "parameters": {
                 "type": "TEXT",
                 "validation": "isString",
+                "required": 0
+            }
+        },
+        "price": {
+            "description": "Pre\u00e7o",
+            "title": "Pre\u00e7o",
+            "nickname": "price",
+            "field_type": "Numeric",
+            "parameters": {
+                "type": "NUMERIC",
+                "validation": "isNumeric",
+                "length": "10",
+                "precision": "3",
                 "required": 0
             }
         }

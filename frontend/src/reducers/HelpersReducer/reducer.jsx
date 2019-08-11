@@ -1,8 +1,9 @@
-import { FETCH_OPTIONS } from './types'
+import { FETCH_OPTIONS, ADD_EVENT } from './types'
 
 const initialState = {
 	items: {}, 
-	item: {}
+	item: {},
+	event: {}
 };
 
 export default function (state = initialState, action) {
@@ -12,6 +13,11 @@ export default function (state = initialState, action) {
 				...state,
 				items: {...action.payload, params: action.params}
 			};
+		case ADD_EVENT: 
+			return { 
+				...state,
+				event: {...action.payload, params: action.params}
+			};			
 		default: 
 			return state;
 	}   

@@ -1,11 +1,9 @@
 import React from 'react'
-import { InputGroup, Input,	InputGroupAddon, Button, Table, Row, Col, ButtonGroup, Alert, Container, Card, CardHeader, CardBody, CardFooter, Form, FormGroup, Label } from 'reactstrap'
+import { CardImg, CardTitle, CardSubtitle, CardText, Button, Row, Col, Container, Card, CardHeader, CardBody, CardFooter } from 'reactstrap'
 import { fetchTicketsEvent, deleteTicketsEvent } from '../../reducers/TicketsEvent/Actions'
+import { addEvent } from '../../reducers/HelpersReducer/Actions'
 import { connect } from 'react-redux'
 import TicketsEventModel from 'models/TicketsEventModel'
-import { MenuPagination } from 'components/MenuPagination'
-import { ItemsPerPage } from 'components/ItemsPerPage'
-import Resume from 'components/Resume'
 import { Link } from 'react-router-dom'
 import Fields from 'fields/Fields'
 import { MenuHeader, HeaderAdmin } from 'components/Headers'
@@ -14,7 +12,7 @@ class TicketsEventList extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-		    Search: "",
+				Search: "",
 			Filters: {
 				Show: true
 			},
@@ -27,14 +25,12 @@ class TicketsEventList extends React.Component {
 			SearchCount: 0,
 			Items: {}
 		}
-		this.ColumnsList = ['id', 'id_promoter']
-		if(this.ColumnsList.indexOf('id_promoter') === -1){
-			this.ColumnsList.push('id_promoter')
-		}
+		this.ColumnsList = ['id', 'id_promoter', 'title', 'description', 'image']
 		this.onChangeFilter = this.onChangeFilter.bind(this)
 		this.ColumnsFields = {}
 		this.onDismiss = this.onDismiss.bind(this)
 		this.changeSearch = this.changeSearch.bind(this)
+		this.addEvent = this.addEvent.bind(this)
 	}
 	onDismiss() {
 		this.setState({ ...this.state, Status: true });
@@ -131,7 +127,7 @@ class TicketsEventList extends React.Component {
 			ItemsPerPage: this.state.ItemsPerPage,
 			PageNumber: this.state.PageNumber
 		}
-		this.props.fetchTicketsEvent(Post, this.props.match.params.IdPredesc);
+		this.props.fetchTicketsEvent(Post);
 	}
 	updateOrderBy(ColumnName){
 		let DataFilter = this.getDataFilter()
@@ -171,123 +167,16 @@ class TicketsEventList extends React.Component {
 		debugger
 	}
 	
-	renderTR(){
-		let FilterTR = []
-		let Trs = []
-		let ColumnMetaData = {}
-		let ColumnData = {}
-		let DataFilter = this.getDataFilter()
-		for (let ColumnName in DataFilter){
-			ColumnData = DataFilter[ColumnName]
-			ColumnMetaData = TicketsEventModel.columns[ColumnName]
-			let ClassIcon = ''
-			if (DataFilter[ColumnName].order === null){
-				ClassIcon = "fa fa-sort"
-			} else if (DataFilter[ColumnName].order === 'ASC'){
-				ClassIcon = "fa fa-caret-down"
-			} else if (DataFilter[ColumnName].order === 'DESC') {
-				ClassIcon = "fa fa-caret-up"
-			} else {
-				ClassIcon = "fa fa-sort"
-			}
-			if (ColumnData.show){
-				Trs.push(
-					<th  key={ColumnMetaData.nickname} >
-						<ButtonGroup onClick={this.updateOrderBy.bind(this, ColumnName)}>
-							<Button color="link">{this.ColumnsFields[ColumnMetaData.nickname].renderTR(ColumnMetaData, ColumnData)} </Button>
-							<Button color="link">
-								<i className={ClassIcon} aria-hidden="true"></i>
-							</Button>
-						</ButtonGroup>						
 
-					</th>
-				)
-				if (['CreatedBy', 'ForeignKey', 'SelectList'].indexOf( ColumnMetaData.field_type ) >= 0) {
-					FilterTR.push(<FormGroup key={ColumnMetaData.nickname + "-field"} ><Label>{ColumnMetaData.title}</Label> {this.ColumnsFields[ColumnMetaData.nickname].renderFilter(ColumnData.value)} </FormGroup>)
-				}
-			}
-		}
-		let Filters = null
-		if (this.state.Filters.Show){
-			Filters = <InputGroup>
-				<Input onChange={ this.changeSearch } placeholder="Search" />
-				<InputGroupAddon addonType="append">
-					<Button outline onClick={this.ClearFilters.bind(this)} color="info"> <i className="fa fa-times" aria-hidden="true"></i> </Button>
-					<Button outline color="info"> <i className="fa fa-search" aria-hidden="true"></i> </Button>
-				</InputGroupAddon>
-			</InputGroup>
-		}
-		return {
-			Trs: (
-				<thead className="thead-light">
-					<tr>
-						<th><ButtonGroup><Link className="btn btn-link" to={`/Admin/TicketsEvent/NewItem/TicketsPromoter/${this.props.match.params.IdPredesc}`}><i className="fa fa-plus" aria-hidden="true"></i></Link><Button onClick={this.ShowFilters.bind(this)} color="link"><i className="fa fa-search-plus" aria-hidden="true"></i></Button></ButtonGroup></th>					
-						{Trs}
-					</tr>
-				</thead>
-			),
-			Filters: (
-				<Form>	
-					{Filters}
-					{ FilterTR } 
-				</Form>
-			)
-		}
-
-		
-	}
-	renderRow(Item){
-		let Cels = []
-		let ColumnData = {}
-		let DataFilter = this.getDataFilter()		
-		Cels.push(<td key="button"><ButtonGroup><Link className="btn btn-outline-info" to={`/Admin/TicketsEvent/ShowItem/${Item.id}`} ><i className="fa fa-check" aria-hidden="true"></i></Link><Link className="btn btn-outline-info" to={`/Admin/TicketsEvent/EditItem/${Item.id}`}><i className="fa fa-edit" aria-hidden="true"></i></Link><Button outline color="danger"><i className="fa fa-trash" aria-hidden="true"></i></Button></ButtonGroup></td>)
-		for (let Key in this.ColumnsList){
-			let ColumnName = this.ColumnsList[Key]
-			ColumnData = DataFilter[ColumnName]
-			if (ColumnData.show){
-				Cels.push(<td key={Key}>{ Resume( Item[ColumnName] ) }</td>)
-			}
-		}
-		
-		return (
-			<tr key={Item.id}>
-				{Cels}
-			</tr>
-		)
-	}
 	ShowFilters() {
 		this.setState({...this.state, Filters: {...this.state.Filters, Show: !this.state.Filters.Show } })
-	}
-	renderBody(){
-		let Rows = []
-		for (let idItem in this.state.Items){
-			Rows.push(this.renderRow(this.state.Items[idItem]))
-		}
-
-		return (
-			<tbody>
-				{Rows}
-			</tbody>
-		)
 	}
 	componentWillReceiveProps(nextProps) {
 		if (typeof nextProps.Payloads === 'object'){
 			this.setState({...this.state, ...nextProps.Payloads});
 		}		
 	}
-	renderAlert(){
-		let Visible = !this.state.Status
-		let Messages = []
-		for (let ColumnName in this.state.Errors){
-			let ItemErro = this.state.Errors[ColumnName]
-			Messages.push(<p key={ColumnName}>{ItemErro}</p>)
-		}
-		return (
-			<Alert color="danger" isOpen={Visible} toggle={this.onDismiss}>
-				{Messages}
-			</Alert>
-		)
-	}
+
 	updatePageNumber(PageNumber){
 		let DataFilter = this.getDataFilter()
 		this.setState({...this.state, PageNumber})
@@ -296,12 +185,48 @@ class TicketsEventList extends React.Component {
 			ItemsPerPage: this.state.ItemsPerPage,
 			PageNumber: PageNumber
 		}
-		this.props.fetchTicketsEvent(Post, this.props.match.params.IdPredesc);	
+		this.props.fetchTicketsEvent(Post);	
+	}
+	addEvent( e ){
+		
+		let Post = {
+			Amount: -1,
+			Method: "addEvent",
+			IdEvent: e.target.getAttribute('data-id-event')
+		}
+		this.props.addEvent(Post)
+	}
+	delEvent( e ){
+		
+		let Post = {
+			Amount: -1,
+			Method: "delEvent",
+			IdEvent: e.target.getAttribute('data-id-event')
+		}
+		this.props.addEvent(Post)
+	}	
+	renderEvents(){
+		let Ret = []
+		for (let i in this.state.Items){
+			let Item = this.state.Items[i]
+			Ret.push(
+				<Col xs="6"  key={ i }>
+					<Card>
+						<CardImg top width="100%" src={ Item.image } alt="Card image cap" />
+						<CardBody>
+							<CardTitle>{ Item.title } </CardTitle>
+							<CardSubtitle>{ Item.description }</CardSubtitle>
+							<CardText>{ Item.description }</CardText>
+							<Button outline color="success" data-id-event={ Item.id } onClick={ this.addEvent }><i className="fa fa-cart-plus" aria-hidden="true"></i>Adicionar ao Carrinho</Button>
+						</CardBody>
+					</Card>
+				</Col>
+			)
+		}
+
+		return <Row>{ Ret }</Row>
 	}
 	render() {
-		let ItemLabel = ""
-		let ItemValue = this.props.match.params.IdPredesc
-		let renderTR = this.renderTR()
 		return (
 			<>
 				<HeaderAdmin />	
@@ -309,27 +234,19 @@ class TicketsEventList extends React.Component {
 					<div className="col">
 						<Card className="shadow">
 							<CardHeader className="border-0">
-								<MenuHeader Entity="TicketsEvent" ItemValue={ItemValue} ItemLabel={ItemLabel} View="List" />
+								Eventos
 							</CardHeader>		
 							<CardBody>
 								<Row>
-									<Col xs="3">
-										{ renderTR.Filters }
-									</Col>
-									<Col xs="9">
-											{this.renderAlert()}
-										<Table className="align-items-center table-flush">
-											{ renderTR.Trs }
-											{this.renderBody()}
-										</Table>
+									<Col xs="12">
+									{ this.renderEvents() }
 									</Col>
 								</Row>
 							</CardBody>
 							<CardFooter className="py-4">                				
 								<Row>
 									<Col xs="12">
-										<ItemsPerPage Value={this.state.ItemsPerPage} />
-										<MenuPagination updatePageNumber={this.updatePageNumber.bind(this)}  ItemsPerPage={this.state.ItemsPerPage} PageNumber={this.state.PageNumber} ReturnCount={this.state.ReturnCount} SearchCount={this.state.SearchCount} />
+										Footer
 									</Col>
 								</Row>
 							</CardFooter>
@@ -344,7 +261,8 @@ const mapStateToProps = (state, props) => {
 	return {
 		Payload: state.TicketsEventReducer.item,
 		Payloads: state.TicketsEventReducer.items,
-		auth: state.Register.auth
+		auth: state.Register.auth,
+		event: state.HelpersReducer.event
 	}
 }
-export default connect(mapStateToProps, {fetchTicketsEvent, deleteTicketsEvent})(TicketsEventList);
+export default connect(mapStateToProps, {fetchTicketsEvent, deleteTicketsEvent, addEvent })(TicketsEventList);

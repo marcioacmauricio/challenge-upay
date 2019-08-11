@@ -427,6 +427,7 @@ class SuperController(dict):
 		if len(Orderings) > 0:
 			query += "\n\t ORDER BY " + ", ".join(Orderings)		
 		query += "\n\t LIMIT " + str(Limit) + " OFFSET " + str(Offset)
+		print(query)
 		# print(Values)
 		# print('listItems:-> ', query)
 		Result = self.DB.exec(query, Values)
@@ -455,9 +456,7 @@ class SuperController(dict):
 	def deleteItem(self, IdItem, Data):
 		return
 
-	def load(self, KeyValue = None, Keys = [], Values = []):
-
-		Columns = []
+	def load(self, KeyValue = None, Keys = [], Values = [], Columns = []):
 		if not len(Columns) > 0:
 			for Key, Value in self.Columns.items():
 				Columns.append(Key)

@@ -48,7 +48,7 @@ if __name__ == "__main__":
 		(r'/TicketsPromoter/ListItems', TicketsPromoterRoute),
         (r'/TicketsEvent', TicketsEventRoute ),		
 		(r'/TicketsEvent/ShowItem/(\d+$)', TicketsEventRoute ),
-		(r'/TicketsEvent/ListItems/(.*)/(\d+$)', TicketsEventRoute ),
+		(r'/TicketsEvent/ListItems', TicketsEventRoute),
         (r'/TicketsTicket', TicketsTicketRoute ),		
 		(r'/TicketsTicket/ShowItem/(\d+$)', TicketsTicketRoute ),
 		(r'/TicketsTicket/ListItems/(.*)/(\d+$)', TicketsTicketRoute ),
@@ -58,6 +58,12 @@ if __name__ == "__main__":
         (r'/TicketsSale', TicketsSaleRoute ),		
 		(r'/TicketsSale/ShowItem/(\d+$)', TicketsSaleRoute ),
 		(r'/TicketsSale/ListItems/(.*)/(\d+$)', TicketsSaleRoute ),
+        (r'/TicketsCart', TicketsCartRoute ),		
+		(r'/TicketsCart/ShowItem/(\d+$)', TicketsCartRoute ),
+		(r'/TicketsCart/ListItems/(.*)/(\d+$)', TicketsCartRoute ),
+        (r'/TicketsCartItem', TicketsCartItemRoute ),		
+		(r'/TicketsCartItem/ShowItem/(\d+$)', TicketsCartItemRoute ),
+		(r'/TicketsCartItem/ListItems/(.*)/(\d+$)', TicketsCartItemRoute ),
 		(r'/Helpers', Helpers ),
 		(r'/Register', Register )
 	], debug=True)    

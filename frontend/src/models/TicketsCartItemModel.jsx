@@ -1,8 +1,8 @@
-const TicketPromoterModel = {
-    "description": "Promotoras",
+const TicketCartItemModel = {
+    "description": "Item de Carrinho",
     "primary_key": "id",
     "key_type": "serial",
-    "title": "Promotoras",
+    "title": "Item de Carrinho",
     "columns": {
         "id": {
             "description": "ID",
@@ -50,7 +50,7 @@ const TicketPromoterModel = {
                 "colValue": "first_name",
                 "colDescription": "middle_names",
                 "required": "0",
-                "TableSchema": "TicketPromoter",
+                "TableSchema": "TicketCartItem",
                 "TableSchemaPredesc": "MasterUser"
             }
         },
@@ -77,7 +77,7 @@ const TicketPromoterModel = {
                 "colValue": "first_name",
                 "colDescription": "middle_names",
                 "required": "0",
-                "TableSchema": "TicketPromoter",
+                "TableSchema": "TicketCartItem",
                 "TableSchemaPredesc": "MasterUser"
             }
         },
@@ -104,7 +104,7 @@ const TicketPromoterModel = {
                 "colValue": "first_name",
                 "colDescription": "middle_names",
                 "required": "0",
-                "TableSchema": "TicketPromoter",
+                "TableSchema": "TicketCartItem",
                 "TableSchemaPredesc": "MasterUser"
             }
         },
@@ -119,28 +119,63 @@ const TicketPromoterModel = {
                 "required": 0
             }
         },
-        "name": {
-            "description": "Nome",
-            "nickname": "name",
-            "title": "Nome",
+        "id_cart": {
+            "description": "Carrinho",
+            "nickname": "id_cart",
+            "title": "Carrinho",
             "ordering": 10,
-            "field_type": "Input",
+            "field_type": "KeyDimension",
             "parameters": {
-                "validation": "isString",
-                "required": 1
+                "colLabel": "id",
+                "colValue": "id",
+                "required": "0",
+                "colDescription": "id",
+                "validation": "isInteger",
+                "TableSchema": "TicketCartItem",
+                "TableSchemaPredesc": "TicketsCart"
             }
         },
-        "title": {
-            "description": "Nome",
-            "nickname": "title",
-            "title": "Nome",
+        "id_event": {
+            "description": "Evento",
+            "nickname": "id_event",
+            "title": "Evento",
             "ordering": 11,
+            "field_type": "ForeignKey",
+            "parameters": {
+                "validation": "isInteger",
+                "colLabel": "title",
+                "colValue": "id",
+                "colDescription": "description",
+                "required": 0,
+                "TableSchema": "TicketCartItem",
+                "TableSchemaPredesc": "TicketsEvent"
+            }
+        },
+        "amount": {
+            "description": "Quantidade",
+            "nickname": "amount",
+            "title": "Quantidade",
+            "ordering": 12,
             "field_type": "Input",
             "parameters": {
-                "validation": "isString",
+                "validation": "isInteger",
+                "required": 0
+            }
+        },
+        "total": {
+            "description": "Total",
+            "nickname": "total",
+            "title": "Total",
+            "ordering": 13,
+            "field_type": "Numeric",
+            "parameters": {
+                "validation": "isNumeric",
+                "length": "10",
+                "precision": "3",
+                "default": "0",
                 "required": 0
             }
         }
     }
 }
-export default TicketPromoterModel
+export default TicketCartItemModel

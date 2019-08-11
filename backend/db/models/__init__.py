@@ -16,6 +16,8 @@ from db.models.TicketsEventModel import TicketsEventModel
 from db.models.TicketsTicketModel import TicketsTicketModel
 from db.models.TicketsCouponModel import TicketsCouponModel
 from db.models.TicketsSaleModel import TicketsSaleModel
+from db.models.TicketsCartModel import TicketsCartModel
+from db.models.TicketsCartItemModel import TicketsCartItemModel
 
 def getModel(EntityName):
 	if EntityName == 'MasterModelTable':
@@ -71,3 +73,9 @@ def getModel(EntityName):
 
 	if EntityName == 'TicketsSale':
 		return TicketsSaleModel
+
+	if EntityName == 'TicketsCart':
+		return TicketsCartModel
+
+	if EntityName == 'TicketsCartItem':
+		return TicketsCartItemModel

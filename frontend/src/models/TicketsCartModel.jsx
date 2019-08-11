@@ -1,8 +1,8 @@
-const TicketPromoterModel = {
-    "description": "Promotoras",
+const TicketCartModel = {
+    "description": "Carrinho",
     "primary_key": "id",
     "key_type": "serial",
-    "title": "Promotoras",
+    "title": "Carrinho",
     "columns": {
         "id": {
             "description": "ID",
@@ -50,7 +50,7 @@ const TicketPromoterModel = {
                 "colValue": "first_name",
                 "colDescription": "middle_names",
                 "required": "0",
-                "TableSchema": "TicketPromoter",
+                "TableSchema": "TicketCart",
                 "TableSchemaPredesc": "MasterUser"
             }
         },
@@ -77,7 +77,7 @@ const TicketPromoterModel = {
                 "colValue": "first_name",
                 "colDescription": "middle_names",
                 "required": "0",
-                "TableSchema": "TicketPromoter",
+                "TableSchema": "TicketCart",
                 "TableSchemaPredesc": "MasterUser"
             }
         },
@@ -104,7 +104,7 @@ const TicketPromoterModel = {
                 "colValue": "first_name",
                 "colDescription": "middle_names",
                 "required": "0",
-                "TableSchema": "TicketPromoter",
+                "TableSchema": "TicketCart",
                 "TableSchemaPredesc": "MasterUser"
             }
         },
@@ -119,28 +119,35 @@ const TicketPromoterModel = {
                 "required": 0
             }
         },
-        "name": {
-            "description": "Nome",
-            "nickname": "name",
-            "title": "Nome",
-            "ordering": 10,
-            "field_type": "Input",
+        "id_coupon": {
+            "description": "Cupom",
+            "nickname": "id_coupon",
+            "title": "Cupom",
+            "ordering": 11,
+            "field_type": "ForeignKey",
             "parameters": {
-                "validation": "isString",
-                "required": 1
+                "validation": "isInteger",
+                "colLabel": "title",
+                "colValue": "id",
+                "colDescription": "description",
+                "required": 0,
+                "TableSchema": "TicketCart",
+                "TableSchemaPredesc": "TicketsCoupon"
             }
         },
-        "title": {
-            "description": "Nome",
-            "nickname": "title",
-            "title": "Nome",
-            "ordering": 11,
-            "field_type": "Input",
+        "total": {
+            "description": "Total",
+            "nickname": "total",
+            "title": "Total",
+            "ordering": 12,
+            "field_type": "Numeric",
             "parameters": {
-                "validation": "isString",
+                "validation": "isNumeric",
+                "length": "10",
+                "precision": "3",
                 "required": 0
             }
         }
     }
 }
-export default TicketPromoterModel
+export default TicketCartModel

@@ -38,6 +38,7 @@ class DB(object):
 			self.Result = ps(*args)
 		except Exception as inst:
 			self.Status = False
+			print(query)
 			if hasattr(inst, 'message'):
 				Message = inst.message
 			else:
@@ -103,3 +104,9 @@ class DB(object):
 
 		if EntityName == 'TicketsSale':
 			return TicketsSaleController( self, self.User )
+
+		if EntityName == 'TicketsCart':
+			return TicketsCartController( self, self.User )
+
+		if EntityName == 'TicketsCartItem':
+			return TicketsCartItemController( self, self.User )

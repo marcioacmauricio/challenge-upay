@@ -36,7 +36,7 @@ class Admin extends React.Component {
 				return (
 					<Route
 						path={prop.layout + prop.path}
-						component={this.props.auth.authorizeComponent( prop.component )}
+						component={ prop.component }
 						key={key}
 					/>
 				);
@@ -66,7 +66,7 @@ class Admin extends React.Component {
 					menus={menus}
 					logo={{
 						innerLink: "/admin/index",
-						imgSrc: require("assets/img/brand/logo_matrisys.png"),
+						imgSrc: require("assets/img/brand/upay.png"),
 						imgAlt: "..."
 					}}
 				/>

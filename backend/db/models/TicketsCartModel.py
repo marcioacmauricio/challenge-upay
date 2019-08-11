@@ -1,16 +1,24 @@
-const TicketPromoterModel = {
-    "description": "Promotoras",
+TicketsCartModel = {
+    "description": "Carrinho",
     "primary_key": "id",
     "key_type": "serial",
-    "title": "Promotoras",
+    "table": "cart",
+    "title": "Carrinho",
+    "schema": "tickets",
+    "table_predesc": "user",
+    "schema_predesc": "master",
+    "sec_table_predesc": "",
+    "sec_schema_predesc": "",
+    "main_table_schema": "MasterUser",
+    "sec_table_schema": "",
     "columns": {
         "id": {
             "description": "ID",
-            "nickname": "id",
             "title": "ID",
-            "ordering": 1,
+            "nickname": "id",
             "field_type": "KeyIncremente",
             "parameters": {
+                "type": "SERIAL",
                 "validation": "isInteger",
                 "required": 1,
                 "primary_key": "1"
@@ -18,129 +26,135 @@ const TicketPromoterModel = {
         },
         "ordering": {
             "description": "Ordering",
-            "nickname": "ordering",
             "title": "Ordering",
-            "ordering": 2,
+            "nickname": "ordering",
             "field_type": "Ordering",
             "parameters": {
+                "type": "SMALLINT",
                 "validation": "isInteger",
                 "required": 0
             }
         },
         "state": {
             "description": "State",
-            "nickname": "state",
             "title": "State",
-            "ordering": 3,
+            "nickname": "state",
             "field_type": "State",
             "parameters": {
+                "type": "SMALLINT",
                 "validation": "isInteger",
                 "required": 0
             }
         },
         "checked_out": {
             "description": "Checked Out",
-            "nickname": "checked_out",
             "title": "Checked Out",
-            "ordering": 4,
+            "nickname": "checked_out",
             "field_type": "CheckedOut",
             "parameters": {
+                "type": "INTEGER",
                 "validation": "isInteger",
+                "Schema": "master",
+                "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
-                "required": "0",
-                "TableSchema": "TicketPromoter",
-                "TableSchemaPredesc": "MasterUser"
+                "required": "0"
             }
         },
         "checked_out_time": {
             "description": "Checked Out Time",
-            "nickname": "checked_out_time",
             "title": "Checked Out Time",
-            "ordering": 5,
+            "nickname": "checked_out_time",
             "field_type": "CheckedOutTime",
             "parameters": {
+                "type": "TIMESTAMP WITHOUT TIME ZONE",
                 "validation": "isDateTime",
                 "required": 0
             }
         },
         "created_by": {
             "description": "Created By",
-            "nickname": "created_by",
             "title": "Created By",
-            "ordering": 6,
+            "nickname": "created_by",
             "field_type": "CreatedBy",
             "parameters": {
+                "type": "INTEGER",
                 "validation": "isInteger",
+                "Schema": "master",
+                "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
-                "required": "0",
-                "TableSchema": "TicketPromoter",
-                "TableSchemaPredesc": "MasterUser"
+                "required": "0"
             }
         },
         "created_time": {
             "description": "Created Time",
-            "nickname": "created_time",
             "title": "Created Time",
-            "ordering": 7,
+            "nickname": "created_time",
             "field_type": "CreatedTime",
             "parameters": {
+                "type": "TIMESTAMP WITHOUT TIME ZONE",
                 "validation": "isDateTime",
                 "required": 0
             }
         },
         "modified_by": {
             "description": "Modified By",
-            "nickname": "modified_by",
             "title": "Modified By",
-            "ordering": 8,
+            "nickname": "modified_by",
             "field_type": "ModifiedBy",
             "parameters": {
+                "type": "INTEGER",
                 "validation": "isInteger",
+                "Schema": "master",
+                "Table": "user",
                 "colLabel": "id",
                 "colValue": "first_name",
                 "colDescription": "middle_names",
-                "required": "0",
-                "TableSchema": "TicketPromoter",
-                "TableSchemaPredesc": "MasterUser"
+                "required": "0"
             }
         },
         "modified_time": {
             "description": "Modified Time",
-            "nickname": "modified_time",
             "title": "Modified Time",
-            "ordering": 9,
+            "nickname": "modified_time",
             "field_type": "UpdatedTime",
             "parameters": {
+                "type": "TIMESTAMP WITHOUT TIME ZONE",
                 "validation": "isDateTime",
                 "required": 0
             }
         },
-        "name": {
-            "description": "Nome",
-            "nickname": "name",
-            "title": "Nome",
-            "ordering": 10,
-            "field_type": "Input",
+        "id_coupon": {
+            "description": "Cupom",
+            "title": "Cupom",
+            "nickname": "id_coupon",
+            "field_type": "ForeignKey",
             "parameters": {
-                "validation": "isString",
-                "required": 1
+                "type": "INTEGER",
+                "validation": "isInteger",
+                "Schema": "tickets",
+                "Table": "coupon",
+                "colLabel": "title",
+                "colValue": "id",
+                "colDescription": "description",
+                "required": 0
             }
         },
-        "title": {
-            "description": "Nome",
-            "nickname": "title",
-            "title": "Nome",
-            "ordering": 11,
-            "field_type": "Input",
+        "total": {
+            "description": "Total",
+            "title": "Total",
+            "nickname": "total",
+            "field_type": "Numeric",
             "parameters": {
-                "validation": "isString",
+                "type": "NUMERIC",
+                "validation": "isNumeric",
+                "length": "10",
+                "precision": "3",
                 "required": 0
             }
         }
     }
 }
-export default TicketPromoterModel

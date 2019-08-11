@@ -16,5 +16,7 @@ from api.routes.TicketsEventRoute import TicketsEventRoute
 from api.routes.TicketsTicketRoute import TicketsTicketRoute
 from api.routes.TicketsCouponRoute import TicketsCouponRoute
 from api.routes.TicketsSaleRoute import TicketsSaleRoute
+from api.routes.TicketsCartRoute import TicketsCartRoute
+from api.routes.TicketsCartItemRoute import TicketsCartItemRoute
 from api.routes.Helpers import Helpers
 from api.routes.Register import Register

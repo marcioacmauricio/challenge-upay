@@ -12,12 +12,12 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class TicketsEventView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'title', 'description']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'title', 'image', 'description']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
-		this.ColumnFKPredesc = 'id_promoter'
-		this.TableShemaPredesc = 'TicketsPromoter'		
+		this.ColumnFKPredesc = ''
+		this.TableShemaPredesc = ''		
 		for (let i = 0; i < this.ColumnsList.length; i++){
 			let ColumnName = this.ColumnsList[i]
 			ColumnData = TicketsEventModel.columns[ColumnName]
@@ -86,11 +86,7 @@ class TicketsEventView extends React.Component {
 			</Table>
 		)	
 	}	
-	render() {
-		let ItemValue = ''
-		if (typeof this.state.Item[this.ColumnFKPredesc] === 'object'){
-			ItemValue = this.state.Item[this.ColumnFKPredesc].value
-		}	
+	render() {	
 	
 		return (
 			<>
@@ -106,7 +102,7 @@ class TicketsEventView extends React.Component {
 								<CardText tag="div" >{this.renderColumns()}</CardText>
 							</CardBody>
 							<CardFooter>
-								<Button outline color="success" className="float-right" ><Link to={`/Admin/TicketsEvent/ListItems/TicketsPromoter/${ItemValue}`}>Lista</Link></Button>							    
+								<Button outline color="success" className="float-right" ><Link to='/Admin/TicketsEvent/ListItems'>Lista</Link></Button>							    
 							</CardFooter>
 						</Card>
 					</div>

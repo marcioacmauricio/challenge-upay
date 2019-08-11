@@ -1,11 +1,11 @@
-import { CREATE_TICKETS_EVENT, READ_TICKETS_EVENT, UPDATE_TICKETS_EVENT, DELETE_TICKETS_EVENT, FETCH_TICKETS_EVENT, ERROR_TICKETS_EVENT } from './types'
+import { CREATE_TICKETS_CART_ITEM, READ_TICKETS_CART_ITEM, UPDATE_TICKETS_CART_ITEM, DELETE_TICKETS_CART_ITEM, FETCH_TICKETS_CART_ITEM, ERROR_TICKETS_CART_ITEM } from './types'
 import getBearer from 'auth/getBearer'
 import { Url } from 'reducers/getUrl'
 
 
-export function readTicketsEvent( TicketsEventData ) {
+export function readTicketsCartItem( TicketsCartItemData ) {
 	return async (dispatch) => {
-		let Resource = '/TicketsEvent/ShowItem/' + TicketsEventData.Id
+		let Resource = '/TicketsCartItem/ShowItem/' + TicketsCartItemData.Id
 		let Bearer = await getBearer()
 		try {
 			const result = await fetch (
@@ -20,16 +20,16 @@ export function readTicketsEvent( TicketsEventData ) {
 			)	
 			const PayloadOptions = await result.json()
 			dispatch({
-				type: READ_TICKETS_EVENT,
+				type: READ_TICKETS_CART_ITEM,
 				payload: PayloadOptions,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 
 		} catch ( error ) {		
 			dispatch({
-				type: ERROR_TICKETS_EVENT,
+				type: ERROR_TICKETS_CART_ITEM,
 				payload: error,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 		}
 	}
@@ -37,9 +37,9 @@ export function readTicketsEvent( TicketsEventData ) {
 
 
 
-export function createTicketsEvent( TicketsEventData ) {
+export function createTicketsCartItem( TicketsCartItemData ) {
 	return async (dispatch) => {
-		let Resource = '/TicketsEvent'
+		let Resource = '/TicketsCartItem'
 		let Bearer = await getBearer()
 		try {
 			const result = await fetch (
@@ -50,21 +50,21 @@ export function createTicketsEvent( TicketsEventData ) {
 						'Content-Type': 'Application/json',
 						'Authorization': 'Bearer ' + Bearer
 					},
-					body: JSON.stringify( TicketsEventData )
+					body: JSON.stringify( TicketsCartItemData )
 				}
 			)	
 			const PayloadOptions = await result.json()
 			dispatch({
-				type: CREATE_TICKETS_EVENT,
+				type: CREATE_TICKETS_CART_ITEM,
 				payload: PayloadOptions,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 
 		} catch ( error ) {		
 			dispatch({
-				type: ERROR_TICKETS_EVENT,
+				type: ERROR_TICKETS_CART_ITEM,
 				payload: error,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 		}
 	}
@@ -72,9 +72,9 @@ export function createTicketsEvent( TicketsEventData ) {
 
 
 
-export function updateTicketsEvent( TicketsEventData ) {
+export function updateTicketsCartItem( TicketsCartItemData ) {
 	return async (dispatch) => {
-		let Resource = '/TicketsEvent'
+		let Resource = '/TicketsCartItem'
 		let Bearer = await getBearer()
 		try {
 			const result = await fetch (
@@ -85,29 +85,29 @@ export function updateTicketsEvent( TicketsEventData ) {
 						'Content-Type': 'Application/json',
 						'Authorization': 'Bearer ' + Bearer
 					},
-					body: JSON.stringify( TicketsEventData )
+					body: JSON.stringify( TicketsCartItemData )
 				}
 			)	
 			const PayloadOptions = await result.json()
 			dispatch({
-				type: UPDATE_TICKETS_EVENT,
+				type: UPDATE_TICKETS_CART_ITEM,
 				payload: PayloadOptions,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 
 		} catch ( error ) {		
 			dispatch({
-				type: ERROR_TICKETS_EVENT,
+				type: ERROR_TICKETS_CART_ITEM,
 				payload: error,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 		}
 	}
 }
 
-export function deleteTicketsEvent( TicketsEventData ) {
+export function deleteTicketsCartItem( TicketsCartItemData ) {
 	return async (dispatch) => {
-		let Resource = '/TicketsEvent'
+		let Resource = '/TicketsCartItem'
 		let Bearer = await getBearer()
 		try {
 			const result = await fetch (
@@ -118,29 +118,29 @@ export function deleteTicketsEvent( TicketsEventData ) {
 						'Content-Type': 'Application/json',
 						'Authorization': 'Bearer ' + Bearer
 					},
-					body: JSON.stringify( TicketsEventData )
+					body: JSON.stringify( TicketsCartItemData )
 				}
 			)	
 			const PayloadOptions = await result.json()
 			dispatch({
-				type: DELETE_TICKETS_EVENT,
+				type: DELETE_TICKETS_CART_ITEM,
 				payload: PayloadOptions,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 
 		} catch ( error ) {		
 			dispatch({
-				type: ERROR_TICKETS_EVENT,
+				type: ERROR_TICKETS_CART_ITEM,
 				payload: error,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 		}
 	}
 }
 
 
-export function fetchTicketsEvent( TicketsEventData ) {
-	let Resource = '/TicketsEvent/ListItems'
+export function fetchTicketsCartItem(TicketsCartItemData, IdPredesc) {
+	let Resource = '/TicketsCartItem/ListItems/TicketsCart/' + IdPredesc
 	return async (dispatch) => {
 		try {
 			let Bearer = await getBearer()
@@ -152,20 +152,20 @@ export function fetchTicketsEvent( TicketsEventData ) {
 						'Content-Type': 'Application/json',
 						'Authorization': 'Bearer ' + Bearer
 					},
-					body: JSON.stringify(TicketsEventData)
+					body: JSON.stringify(TicketsCartItemData)
 				}
 			)		
 			const PayloadOptions = await result.json()
 			dispatch({
-				type: FETCH_TICKETS_EVENT,
+				type: FETCH_TICKETS_CART_ITEM,
 				payload: PayloadOptions,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 		} catch (error) {		
 			dispatch({
-				type: ERROR_TICKETS_EVENT,
+				type: ERROR_TICKETS_CART_ITEM,
 				payload: error,
-				params: TicketsEventData
+				params: TicketsCartItemData
 			})
 		}
 	}

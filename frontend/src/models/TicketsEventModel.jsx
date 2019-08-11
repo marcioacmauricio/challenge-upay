@@ -124,7 +124,7 @@ const TicketEventModel = {
             "nickname": "id_promoter",
             "title": "Promotoras",
             "ordering": 10,
-            "field_type": "KeyDimension",
+            "field_type": "ForeignKey",
             "parameters": {
                 "colLabel": "title",
                 "colValue": "id",
@@ -145,6 +145,17 @@ const TicketEventModel = {
                 "required": 1
             }
         },
+        "image": {
+            "description": "Image",
+            "nickname": "image",
+            "title": "Image",
+            "ordering": 12,
+            "field_type": "Image",
+            "parameters": {
+                "validation": "isImage",
+                "required": 0
+            }
+        },
         "description": {
             "description": "Descri\u00e7\u00e3o",
             "nickname": "description",
@@ -153,6 +164,19 @@ const TicketEventModel = {
             "field_type": "Textarea",
             "parameters": {
                 "validation": "isString",
+                "required": 0
+            }
+        },
+        "price": {
+            "description": "Pre\u00e7o",
+            "nickname": "price",
+            "title": "Pre\u00e7o",
+            "ordering": 14,
+            "field_type": "Numeric",
+            "parameters": {
+                "validation": "isNumeric",
+                "length": "10",
+                "precision": "3",
                 "required": 0
             }
         }

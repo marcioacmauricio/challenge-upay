@@ -1,43 +1,7 @@
 var menus = [
 	{
-		path: "/MasterModelTable/ListItems",
-		name: "List Tabela Modelo",
-		icon: "ni ni-bullet-list-67 text-red",
-		layout: "/admin"
-	},
-	{
-		path: "/MasterUser/ListItems",
-		name: "List User",
-		icon: "ni ni-bullet-list-67 text-red",
-		layout: "/admin"
-	},
-	{
-		path: "/MasterTablePermission/ListItems",
-		name: "List Table permission",
-		icon: "ni ni-bullet-list-67 text-red",
-		layout: "/admin"
-	},
-	{
-		path: "/MasterMailTemplate/ListItems",
-		name: "List Mail template",
-		icon: "ni ni-bullet-list-67 text-red",
-		layout: "/admin"
-	},
-	{
-		path: "/MasterResource/ListItems",
-		name: "List Resource",
-		icon: "ni ni-bullet-list-67 text-red",
-		layout: "/admin"
-	},
-	{
-		path: "/MasterUserGroup/ListItems",
-		name: "List User group",
-		icon: "ni ni-bullet-list-67 text-red",
-		layout: "/admin"
-	},
-	{
-		path: "/TicketsPromoter/ListItems",
-		name: "List Promotoras",
+		path: "/TicketsEvent/ListItems",
+		name: "Eventos",
 		icon: "ni ni-bullet-list-67 text-red",
 		layout: "/admin"
 	},

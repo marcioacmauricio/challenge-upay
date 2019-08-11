@@ -137,6 +137,17 @@ TicketsPromoterModel = {
                 "validation": "isString",
                 "required": 1
             }
+        },
+        "title": {
+            "description": "Nome",
+            "title": "Nome",
+            "nickname": "title",
+            "field_type": "Input",
+            "parameters": {
+                "type": "CHARACTER VARYING",
+                "validation": "isString",
+                "required": 0
+            }
         }
     }
 }

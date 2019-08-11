@@ -17,6 +17,8 @@ import TicketsEventReducer from './TicketsEvent/reducer'
 import TicketsTicketReducer from './TicketsTicket/reducer'
 import TicketsCouponReducer from './TicketsCoupon/reducer'
 import TicketsSaleReducer from './TicketsSale/reducer'
+import TicketsCartReducer from './TicketsCart/reducer'
+import TicketsCartItemReducer from './TicketsCartItem/reducer'
 import HelpersReducer from './HelpersReducer/reducer'
 import Register from './Register/reducer'
 export default combineReducers({
@@ -38,6 +40,8 @@ export default combineReducers({
 	TicketsTicketReducer,
 	TicketsCouponReducer,
 	TicketsSaleReducer,
+	TicketsCartReducer,
+	TicketsCartItemReducer,
 	HelpersReducer,
 	Register
 })
