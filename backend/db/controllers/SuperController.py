@@ -5,43 +5,6 @@ from collections import OrderedDict
 from datetime import timedelta, datetime
 import json
 class SuperController(dict):
-	Description = ""
-	Id = 0
-	Schema = ""
-	Table = ""
-	IsRecursive = 0
-	Level = 1
-	Nickname = ""
-	Ordering = ""
-	Title = ""
-	Columns = {}
-	Status = True
-	Payload = {}
-	Errors = {}	
-	ItemsPerPage = 0
-	ReturnCount = 0
-	SearchCount = 0
-	PageNumber = 0
-	ColumnsUsed = []
-	Operation = None
-	ToSave = None
-	ToList = None
-	ToView = None
-	Key = None
-	Params = []
-	Orderings = []
-	Argument = {}
-	ReturningSave = []
-	ReturningView = []
-	ReturningList = []
-	Breadcrumb = {}
-	TablePredesc = ""
-	SchemaPredesc = ""
-	SecTablePredesc = ""
-	SecSchemaPredesc = ""
-	MainTableSchema = ""
-	SecTableSchema = ""
-	BreadcrumbPredesc = ""
 	def __init__(self, Metadata, Key, ToSave, ToList, ToView, Item):
 		self.Description = Metadata.get('description')
 		self.PrimaryKey = Metadata.get('primary_key')
@@ -456,7 +419,13 @@ class SuperController(dict):
 	def deleteItem(self, IdItem, Data):
 		return
 
-	def load(self, KeyValue = None, Keys = [], Values = [], Columns = []):
+	def load(self, KeyValue = None, Keys = None, Values = None, Columns = None):
+		if Keys is None:
+			Keys = []
+		if Values is None:
+			Values = []
+		if Columns is None:
+			Columns = []
 		if not len(Columns) > 0:
 			for Key, Value in self.Columns.items():
 				Columns.append(Key)

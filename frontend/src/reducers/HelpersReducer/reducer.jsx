@@ -1,5 +1,4 @@
-import { FETCH_OPTIONS, ADD_EVENT } from './types'
-
+import { FETCH_OPTIONS, ADD_EVENT, GET_EVENTS, ERROR } from './types';
 const initialState = {
 	items: {}, 
 	item: {},
@@ -17,7 +16,12 @@ export default function (state = initialState, action) {
 			return { 
 				...state,
 				event: {...action.payload, params: action.params}
-			};			
+			};	
+		case GET_EVENTS:
+			return { 
+				...state,
+				event: {...action.payload, params: action.params}
+			};					
 		default: 
 			return state;
 	}   

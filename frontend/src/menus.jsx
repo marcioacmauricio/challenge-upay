@@ -1,6 +1,6 @@
 var menus = [
 	{
-		path: "/TicketsEvent/ListItems",
+		path: "/TicketsEvent/EventSubscribe",
 		name: "Eventos",
 		icon: "ni ni-bullet-list-67 text-red",
 		layout: "/admin"

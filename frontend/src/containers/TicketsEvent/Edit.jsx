@@ -9,7 +9,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class TicketsEventEdit extends React.Component {
 	constructor() {
 		super()
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'title', 'image', 'description']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'title', 'image', 'description', 'price']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}
@@ -138,6 +138,7 @@ class TicketsEventEdit extends React.Component {
 										{this.renderField('title')}
 										{this.renderField('image')}
 										{this.renderField('description')}
+										{this.renderField('price')}
 									</Form>
 								</CardText>
 							</CardBody>

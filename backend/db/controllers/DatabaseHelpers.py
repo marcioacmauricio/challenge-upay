@@ -13,6 +13,56 @@ class DatabaseHelpers(object):
 		self.User = User
 		self.DB = DB( User )
 		super(DatabaseHelpers, self).__init__()
+	def getCart(self, Cart, CartItem = None ):
+		Return = {}
+		if not bool(Cart):
+			return Return
+		if not bool(CartItem):
+			CartItem = self.DB.getEntity('TicketsCartItem')
+		Return = dict( Cart )
+		Return['Items'] = {}
+		CartItems = CartItem.query(Cart.get('id'))
+		Total = 0.0
+		for i in range(len(CartItems)):
+			Row = CartItems[i]
+			Total += float(Row.get('total'))
+			Return['Items'][Row.get('id')] = Row
+		Quo = 1
+		CouponDict = {}
+		if (Cart.get('id_coupon')):
+			Coupon = self.DB.getEntity('TicketsCoupon')
+			Coupon.load( Cart.get('id_coupon'), Columns = [ 'id', 'descount', 'code'] )
+			CouponDict = dict(Coupon)			
+			Quo = float( 1.0 - (float(CouponDict.get('descount')) / 100.0) )
+			CouponDict['descount'] = str(CouponDict.get('descount'))
+		Total = Total * Quo	
+		Return['Coupon'] = CouponDict		
+		Return['total'] = Total
+		Cart['total'] = Total
+		Cart.save('id')
+		return Return
+
+	def getEvents(self):
+		Return = {}
+		Return['Status'] = True
+		Return['Errors'] = {}
+		Return['ReturnCount'] = 0
+		Return['SearchCount'] = 0
+		Return['PageNumber'] = 0
+		Return['Items'] = {}
+		Return['FullCart'] = {}
+		query = "SELECT id, title, description, image FROM tickets.event "
+		Result = self.DB.exec(query)
+		if self.DB.Status:
+			for i in range(len(Result)):
+				Row = dict(Result[i])
+				Return['Items'][Row.get('id')] = Row
+		Cart = self.DB.getEntity('TicketsCart')
+		Cart.load(Keys = ['created_by', 'state'], Values = [ self.User.get('sub'), 0 ], Columns = [ 'created_by', 'state', 'id', 'id_coupon' ])
+		if not bool(Cart.get('id')):
+			return Return
+		Return['FullCart'] = self.getCart(Cart)
+		return Return
 	def addEvent(self, Data ):
 		Return = {}
 		Return['Status'] = True
@@ -27,10 +77,9 @@ class DatabaseHelpers(object):
 		Event = self.DB.getEntity('TicketsEvent')
 
 		Event.load( int(Data.get('IdEvent')) )
-		Cart.load(Keys = ['created_by', 'state'], Values = [ self.User.get('sub'), 0 ], Columns = ['created_by', 'state', 'id'])
+		Cart.load(Keys = ['created_by', 'state'], Values = [ self.User.get('sub'), 0 ], Columns = [ 'created_by', 'state', 'id', 'id_coupon' ])
 		if bool(Cart.get('id')):
 			CartItem = self.DB.getEntity('TicketsCartItem')
-
 			CartItem.load( Keys = ['id_cart', 'id_event'], Values = [ int(Cart.get('id')), int(Data.get('IdEvent')) ], Columns = ['id', 'id_cart', 'id_event', 'amount'] )
 			if bool(CartItem.get('id')):
 				CartItem['amount'] = CartItem.get('amount') + int(Data.get('Amount'))
@@ -43,22 +92,29 @@ class DatabaseHelpers(object):
 					CartItem['amount'] = 1
 					CartItem['total'] = Event.get('price')
 					CartItem.save()
+
 		else:
 			Cart.save()
 			if not Cart.Status:
 				print(Cart.Errors)
+				return Return
 			else:
 				CartItem['id_cart'] = Cart.get('id')
 				CartItem['id_event'] = int(Data.get('IdEvent'))
 				CartItem['amount'] = 1
 				CartItem['total'] = Event.get('price')
 				CartItem.save()
-				print('save_cart_item')
 				Cart['total'] = Event.get('price')
 				Cart.save('id')
 				if not CartItem.Status:
 					print(CartItem.Errors)
-
+		query = "SELECT id, title, description, image FROM tickets.event "
+		Result = self.DB.exec(query)
+		if self.DB.Status:
+			for i in range(len(Result)):
+				Row = dict(Result[i])
+				Return['Items'][Row.get('id')] = Row					
+		Return['FullCart'] = self.getCart(Cart)
 		return Return		
 
 	def getOptionsFK(self, Params):

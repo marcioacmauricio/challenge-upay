@@ -137,9 +137,9 @@ TicketsCartModel = {
                 "validation": "isInteger",
                 "Schema": "tickets",
                 "Table": "coupon",
-                "colLabel": "title",
+                "colLabel": "code",
                 "colValue": "id",
-                "colDescription": "description",
+                "colDescription": "code",
                 "required": 0
             }
         },

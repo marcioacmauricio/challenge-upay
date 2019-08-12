@@ -16,8 +16,16 @@ class ModifiedBy(SuperField):
 
 	def getInputToList(self, ColumData):
 		Params = ColumData.get('parameters')
-		return 'describe_fk(' + ColumData.get('nickname') + ", '" + Params.get('colValue') + "', '" + Params.get('colLabel') + "', '" + Params.get('Schema') + "." + Params.get('Table') + "')"
+		StrQuery = 'describe_fk(' + ColumData.get('nickname') + ", '" + Params.get('colValue') + "', '" + Params.get('colLabel') + "', '" + Params.get('Schema') + '.' + Params.get('Table') + "'"
+		if bool(Params.get('colDescription')):
+			StrQuery += ", '" + Params.get('colDescription') + "'"
+		StrQuery += ")"
+		return StrQuery
 
 	def getInputToView(self, ColumData):
 		Params = ColumData.get('parameters')
-		return 'fk2json(' + ColumData.get('nickname') + ", '" + Params.get('colValue') + "', '" + Params.get('colLabel') + "', '" + Params.get('Schema') + "." + Params.get('Table') + "')"
+		StrQuery = 'fk2json(' + ColumData.get('nickname') + ", '" + Params.get('colValue') + "', '" + Params.get('colLabel') + "', '" + Params.get('Schema') + '.' + Params.get('Table') + "'"
+		if bool(Params.get('colDescription')):
+			StrQuery += ", '" + Params.get('colDescription') + "'"
+		StrQuery += ")"
+		return StrQuery

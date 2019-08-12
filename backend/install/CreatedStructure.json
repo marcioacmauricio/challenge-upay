@@ -5181,5 +5181,22 @@
         "status": {
             "stt": "NoAlter"
         }
+    },
+    "3_30_458": {
+        "schema": "tickets",
+        "table": "coupon",
+        "ordering": 12,
+        "key": "3_30_458",
+        "query": "ALTER TABLE tickets.coupon ADD COLUMN descount NUMERIC",
+        "params": {
+            "object": "column",
+            "name": "descount",
+            "type": "NUMERIC",
+            "validation": "isNumeric",
+            "length": "11",
+            "precision": "3",
+            "required": 0
+        },
+        "status": {}
     }
 }

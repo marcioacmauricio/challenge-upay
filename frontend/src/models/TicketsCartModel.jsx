@@ -127,9 +127,9 @@ const TicketCartModel = {
             "field_type": "ForeignKey",
             "parameters": {
                 "validation": "isInteger",
-                "colLabel": "title",
+                "colLabel": "code",
                 "colValue": "id",
-                "colDescription": "description",
+                "colDescription": "code",
                 "required": 0,
                 "TableSchema": "TicketCart",
                 "TableSchemaPredesc": "TicketsCoupon"

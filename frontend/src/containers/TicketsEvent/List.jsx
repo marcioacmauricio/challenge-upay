@@ -190,7 +190,7 @@ class TicketsEventList extends React.Component {
 	addEvent( e ){
 		
 		let Post = {
-			Amount: -1,
+			Amount: 1,
 			Method: "addEvent",
 			IdEvent: e.target.getAttribute('data-id-event')
 		}

@@ -12,7 +12,7 @@ import { MenuHeader, HeaderAdmin } from 'components/Headers'
 class TicketsCouponView extends React.Component {
 	constructor() {
 		super();
-		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'code']
+		this.ColumnsList = ['id', 'ordering', 'state', 'checked_out', 'checked_out_time', 'created_by', 'created_time', 'modified_by', 'modified_time', 'id_promoter', 'code', 'descount']
 		this.ColumnsFields = {}
 		let ColumnData = {}
 		let Item = {}

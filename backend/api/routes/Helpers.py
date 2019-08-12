@@ -43,6 +43,8 @@ class Helpers(tornado.web.RequestHandler):
 			Return.update(Helper.getOptionsFK(self.data))
 		elif (self.data.get('Method') == 'addEvent'):
 			Return.update(Helper.addEvent(self.data))
+		elif (self.data.get('Method') == 'getEvents'):
+			Return.update( Helper.getEvents() )			
 		else:
 			print(pretty(self.data))
 

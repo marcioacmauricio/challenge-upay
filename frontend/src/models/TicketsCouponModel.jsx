@@ -144,6 +144,19 @@ const TicketCouponModel = {
                 "validation": "isString",
                 "required": 1
             }
+        },
+        "descount": {
+            "description": "Desconto",
+            "nickname": "descount",
+            "title": "Desconto",
+            "ordering": 12,
+            "field_type": "Numeric",
+            "parameters": {
+                "validation": "isNumeric",
+                "length": "11",
+                "precision": "3",
+                "required": 0
+            }
         }
     }
 }

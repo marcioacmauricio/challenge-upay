@@ -22,7 +22,7 @@ import { MasterUserGroupResourceEdit, MasterUserGroupResourceList, MasterUserGro
 import { MasterUserUserGroupEdit, MasterUserUserGroupList, MasterUserUserGroupView } from 'containers/MasterUserUserGroup'
 import { MasterAuthenticationEdit, MasterAuthenticationList, MasterAuthenticationView } from 'containers/MasterAuthentication'
 import { TicketsPromoterEdit, TicketsPromoterList, TicketsPromoterView } from 'containers/TicketsPromoter'
-import { TicketsEventEdit, TicketsEventList, TicketsEventView } from 'containers/TicketsEvent'
+import { TicketsEventEdit, TicketsEventList, TicketsEventView, EventSubscribe, EventBuy } from 'containers/TicketsEvent'
 import { TicketsTicketEdit, TicketsTicketList, TicketsTicketView } from 'containers/TicketsTicket'
 import { TicketsCouponEdit, TicketsCouponList, TicketsCouponView } from 'containers/TicketsCoupon'
 import { TicketsSaleEdit, TicketsSaleList, TicketsSaleView } from 'containers/TicketsSale'
@@ -30,6 +30,20 @@ import { TicketsCartEdit, TicketsCartList, TicketsCartView } from 'containers/Ti
 import { TicketsCartItemEdit, TicketsCartItemList, TicketsCartItemView } from 'containers/TicketsCartItem'
 
 var routes = [
+	{
+		path: "/TicketsEvent/EventBuy",
+		name: "Eventos",
+		icon: "ni ni-bullet-list-67 text-red",
+		layout: "/admin",
+		component: EventBuy
+	},
+	{
+		path: "/TicketsEvent/EventSubscribe",
+		name: "Eventos",
+		icon: "ni ni-bullet-list-67 text-red",
+		layout: "/admin",
+		component: EventSubscribe,
+	},
 	{
 		path: "/recover-password",
 		name: "Recover Password",

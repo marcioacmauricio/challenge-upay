@@ -152,6 +152,19 @@ TicketsCouponModel = {
                 "validation": "isString",
                 "required": 1
             }
+        },
+        "descount": {
+            "description": "Desconto",
+            "title": "Desconto",
+            "nickname": "descount",
+            "field_type": "Numeric",
+            "parameters": {
+                "type": "NUMERIC",
+                "validation": "isNumeric",
+                "length": "11",
+                "precision": "3",
+                "required": 0
+            }
         }
     }
 }
