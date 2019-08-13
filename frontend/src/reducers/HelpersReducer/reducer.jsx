@@ -1,8 +1,9 @@
-import { FETCH_OPTIONS, ADD_EVENT, GET_EVENTS, ERROR } from './types';
+import { FETCH_OPTIONS, ADD_EVENT, GET_EVENTS, PAY_TICKET, ERROR } from './types';
 const initialState = {
 	items: {}, 
 	item: {},
-	event: {}
+	event: {},
+	transation: {}
 };
 
 export default function (state = initialState, action) {
@@ -21,7 +22,12 @@ export default function (state = initialState, action) {
 			return { 
 				...state,
 				event: {...action.payload, params: action.params}
-			};					
+			};
+		case PAY_TICKET:
+			return { 
+				...state,
+				transation: {...action.payload, params: action.params}
+			};			
 		default: 
 			return state;
 	}   

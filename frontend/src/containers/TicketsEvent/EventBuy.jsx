@@ -1,13 +1,16 @@
 import React from 'react'
 import { CardImg, CardTitle, CardSubtitle, CardText, Button, Row, Col, Container, Card, CardHeader, CardBody, CardFooter, Form, FormGroup, Label, Input, FormText } from 'reactstrap'
 import { fetchTicketsEvent, deleteTicketsEvent } from '../../reducers/TicketsEvent/Actions'
-import { addEvent, getEvents } from '../../reducers/HelpersReducer/Actions'
+import { addEvent, getEvents, payTicket } from '../../reducers/HelpersReducer/Actions'
 import { connect } from 'react-redux'
 import TicketsEventModel from 'models/TicketsEventModel'
 import { Link } from 'react-router-dom'
 import Fields from 'fields/Fields'
 import Cart from './Cart'
+import money from 'util/money'
+import { If, Then, Else } from 'react-if'
 import { MenuHeader, HeaderAdmin } from 'components/Headers'
+import Zoop from 'zoop-integration'
 
 class EventBuy extends React.Component {
 	constructor() {
@@ -16,12 +19,30 @@ class EventBuy extends React.Component {
 			Status: true,
 			Errors: {},
 			FullCart: {},
-			Items: {}
+			Items: {},
+			isPayed: false,
+			Form: {
+				Total: "0",
+				BuyerId: "5f891b3920e44992ad826f59b689e0f8",
+				address: "",
+				address2: "",
+				city: "",
+				state: "",
+				zip_cod: "",
+				card1: "4539",
+				card2: "0033",
+				card3: "7072",
+				card4: "5497",
+				ccv: ""
+			},
+			Transation: {}
 		}
 		this.ColumnsList = ['id', 'id_promoter', 'title', 'description', 'image']
 		this.ColumnsFields = {}
 		this.onDismiss = this.onDismiss.bind(this)
 		this.addEvent = this.addEvent.bind(this)
+		this.payTicket = this.payTicket.bind(this)
+		this.changeInput = this.changeInput.bind(this)
 	}
 	onDismiss() {
 		this.setState({ ...this.state, Status: true });
@@ -40,13 +61,19 @@ class EventBuy extends React.Component {
 	
 
 	componentWillReceiveProps(nextProps) {
-		// debugger
+		let newState = { ...this.state }
 		if (nextProps.event.Status === true){
-			let newState = { ...this.state }
+			newState.Form.Total = nextProps.event.FullCart.total + "00"
 			newState.FullCart = nextProps.event.FullCart
 			newState.Items = nextProps.event.Items
-			this.setState( newState );
-		}		
+			
+		}	
+		if (nextProps.transation.amount !== undefined){
+			debugger
+			newState.Transation = nextProps.transation
+			newState.isPayed = true
+		}
+		this.setState( newState );
 	}
 
 	updatePageNumber(PageNumber){
@@ -98,7 +125,17 @@ class EventBuy extends React.Component {
 
 		return <Row>{ Ret }</Row>
 	}
+	changeInput(e){
+		let newState = { ...this.state }
+		newState.Form[e.target.name] = e.target.value
+		this.setState( newState )
+	}
+	payTicket( e ){
+		e.preventDefault()
+		this.props.payTicket(this.state.Form)
+	}
 	render() {
+		// debugger
 		return (
 			<>
 				<HeaderAdmin />	
@@ -106,67 +143,99 @@ class EventBuy extends React.Component {
 					<div className="col">
 						<Card className="shadow">
 							<CardHeader className="border-0">
-								Eventos
+								Pagamento
 							</CardHeader>		
 							<CardBody>
-								<Row>
-									<Col xs="8">
-										<Form>
-											<Row form>
-												<Col md={6}>
+								<If condition={ this.state.Transation.transaction_number === undefined } >
+									<Then>
+										<Row>
+											<Col xs="8">
+												<h3>Endereço de Entrega</h3>
+												<Form>
 													<FormGroup>
-														<Label for="exampleEmail">Email</Label>
-														<Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+														<Label for="exampleAddress">Endereço</Label>
+														<Input onChange={ this.changeInput } value={ this.state.Form.address } type="text" name="address" placeholder="Av. Nome da Avenida, nº 123"/>
 													</FormGroup>
-												</Col>
-												<Col md={6}>
 													<FormGroup>
-														<Label for="examplePassword">Password</Label>
-														<Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+														<Label for="exampleAddress2">Complemento</Label>
+														<Input onChange={ this.changeInput } value={ this.state.Form.address2 } type="text" name="address2" placeholder="Casa, Apartamento, Bloco, Andar"/>
 													</FormGroup>
-												</Col>
-											</Row>
-											<FormGroup>
-												<Label for="exampleAddress">Address</Label>
-												<Input type="text" name="address" id="exampleAddress" placeholder="1234 Main St"/>
-											</FormGroup>
-											<FormGroup>
-												<Label for="exampleAddress2">Address 2</Label>
-												<Input type="text" name="address2" id="exampleAddress2" placeholder="Apartment, studio, or floor"/>
-											</FormGroup>
-											<Row form>
-												<Col md={6}>
+													<Row form>
+														<Col md={6}>
+															<FormGroup>
+																<Label for="exampleCity">Cidade</Label>
+																<Input onChange={ this.changeInput } value={ this.state.Form.city } type="text" name="city" />
+															</FormGroup>
+														</Col>
+														<Col md={4}>
+															<FormGroup>
+																<Label for="exampleState">Estado</Label>
+																<Input onChange={ this.changeInput } value={ this.state.Form.state } type="text" name="state" />
+															</FormGroup>
+														</Col>
+														<Col md={2}>
+															<FormGroup>
+																<Label for="exampleZip">CEP</Label>
+																<Input onChange={ this.changeInput } value={ this.state.Form.zip_cod } type="text" name="zip_cod"/>
+															</FormGroup>  
+														</Col>
+													</Row>
 													<FormGroup>
-														<Label for="exampleCity">City</Label>
-														<Input type="text" name="city" id="exampleCity"/>
+														<Label for="exampleAddress2">Cartão de Crédito</Label>
+														<Row form>
+															<Col md={3}>
+																<FormGroup>
+																	<Input onChange={ this.changeInput } value={ this.state.Form.card1 } type="text" name="card1" />
+																</FormGroup>
+															</Col>
+															<Col md={3}>
+																<FormGroup>
+																	<Input onChange={ this.changeInput } value={ this.state.Form.card2 } type="text" name="card2"/>
+																</FormGroup>
+															</Col>
+															<Col md={3}>
+																<FormGroup>
+																	<Input onChange={ this.changeInput } value={ this.state.Form.card3 } type="text" name="card3"/>
+																</FormGroup>  
+															</Col>
+															<Col md={3}>
+																<FormGroup>
+																	<Input onChange={ this.changeInput } value={ this.state.Form.card4 } type="text" name="card4"/>
+																</FormGroup>  
+															</Col>													
+														</Row>												
 													</FormGroup>
-												</Col>
-												<Col md={4}>
-													<FormGroup>
-														<Label for="exampleState">State</Label>
-														<Input type="text" name="state" id="exampleState"/>
+													<Row form>
+														<Col md={2}>
+															<FormGroup>
+																<Label for="exampleZip">CCV</Label>
+																<Input onChange={ this.changeInput } value={ this.state.Form.ccv } type="text" name="ccv"/>
+															</FormGroup>  
+														</Col>
+													</Row> 
+													<FormGroup check>
+														<Input type="checkbox" name="check" id="exampleCheck"/>
+														<Label for="exampleCheck" check>O Endereço de cobrança é o mesmo de entrega</Label>
 													</FormGroup>
-												</Col>
-												<Col md={2}>
-													<FormGroup>
-														<Label for="exampleZip">Zip</Label>
-														<Input type="text" name="zip" id="exampleZip"/>
-													</FormGroup>  
-												</Col>
-											</Row>
-											<FormGroup check>
-												<Input type="checkbox" name="check" id="exampleCheck"/>
-												<Label for="exampleCheck" check>Check me out</Label>
-											</FormGroup>
-											<Button>Sign in</Button>
-										</Form>
-									</Col>
-									<Col xs="4">
-										<Cart FullCart={this.state.FullCart} />
-										<br/>
-										
-									</Col>
-								</Row>
+													<FormGroup check>
+														<Input type="checkbox" name="check" id="exampleCheck"/>
+														<Label for="exampleCheck" check>Guardar informações para próxima compra</Label>
+													</FormGroup>
+												</Form>
+											</Col>
+											<Col xs="4">
+												<Cart FullCart={this.state.FullCart} />
+												<br/>
+												<Button disabled={ this.state.isPayed } className="float-right" onClick={ this.payTicket } outline color="success">Pagar <strong>(R$ { money( this.state.FullCart.total + ".000" ) })</strong></Button>
+											</Col>
+										</Row>
+									</Then>
+									<Else>
+										<h3>Pagamento concluido!</h3>
+										<span>Código da tranzação: { this.state.Transation.transaction_number } </span>
+									</Else>
+								</If>
+
 							</CardBody>
 							<CardFooter className="py-4">                				
 								<Row>
@@ -185,7 +254,8 @@ class EventBuy extends React.Component {
 const mapStateToProps = (state, props) => {
 	return {
 		auth: state.Register.auth,
-		event: state.HelpersReducer.event
+		event: state.HelpersReducer.event,
+		transation: state.HelpersReducer.transation
 	}
 }
-export default connect(mapStateToProps, { getEvents, addEvent })(EventBuy);
+export default connect(mapStateToProps, { getEvents, addEvent, payTicket })(EventBuy);
