@@ -1,3 +1,3 @@
 # challenge-upay
 
-![](confluded.gif)
+![](concluded.gif)
